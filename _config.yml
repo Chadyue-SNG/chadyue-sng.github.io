@@ -21,10 +21,10 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "YUE Wenchao (岳文超)"
+  name             : "YUE, Wenchao 岳文超"
   avatar           : "images/chad.jpg"
   bio              : "M.S.@ NUS | Ph.D.@ CUHK | CTO @ Rodeep Ltd"
-  location         : "Hong Kong"
+  location         : "Shatin, New Territories, Hong Kong"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=KheeXAMAAAAJ&hl=ko"
