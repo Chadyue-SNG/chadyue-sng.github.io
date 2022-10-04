@@ -21,6 +21,13 @@ I am a 2nd-year Ph.D. student in <a href='http://www.ee.cuhk.edu.hk/en-gb/'>Depa
 
 My main research vision is to build autonomous dynamic tactile generation module based on multimodal fusion (vision+tactile), which enables the surgical robot to autonomously and efficiently acquire biological properties (such as tissue's elastic modulus) during operation through only millimeter-scale contact depth. In this way, I firmly believe that it safely provides the surgeon with more information through physical interaction beyond the single visual information input, creating a more immersive and comprehensive view of the surgery. Also, I am also interested and dedicated to developing inspiring and new generation of medical devices based on deployable mechanisms, origami structure, soft machines, and etc.
 
+# 🔥 News
+- *07.2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
+- *07.2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. (IF=3.847, 2022)
+- *04.2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523, 2022)
+- *07.2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131, 2022)
+- *06.2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
+
 # 📖 Academic Educations
 - *2021 - now*,  Ph.D., Department of Electronic Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong.
 - *2020 - 2021*, M.S., Department of Mechanical Engineering, National University of Singapore, Singapore 
@@ -32,12 +39,6 @@ _Fundamentals of smart (self healing, sensing, actuating) materials, biology and
 - *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.  
 _The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
 
-# 🔥 News
-- *07.2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
-- *07.2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. (IF=3.847, 2022)
-- *04.2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523, 2022)
-- *07.2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131, 2022)
-- *06.2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
 
 # 📝 Publications 
 
