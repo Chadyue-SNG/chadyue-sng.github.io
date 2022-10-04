@@ -52,7 +52,7 @@ My main research vision is to build autonomous dynamic tactile generation module
 # 📖 Educations
 - *2021 - now*,  Ph.D., Department of Electronic Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong.
 - *2020 - 2021*, M.S., Department of Mechanical Engineering, National University of Singapore, Singapore 
-- *2019 - 2020*, E.S.P, Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.
+- *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.
 - *2016 - 2020*, B.Eng, Department of Mechanical Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing, Jiangsu, China.
 
 # 💬 Invited Talks
