@@ -23,11 +23,11 @@ My main research vision is to build autonomous dynamic tactile generation module
 
 
 # 🔥 News
-- *07.2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325,2022)
-- *07.2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors.(IF=3.847,2022)
-- *04.2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523,2022)
-- *07.2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131,2022)
-- *06.2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325,2022)
+- *07.2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
+- *07.2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. (IF=3.847, 2022)
+- *04.2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523, 2022)
+- *07.2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131, 2022)
+- *06.2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
 
 # 📝 Publications 
 
