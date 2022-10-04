@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "YUE Wenchao, Chad"
-description              : "Haptics perception in Medical Robotics;<br> Soft Machine;<br> Medical Mechatronics"
+description              : "**Haptics perception in Medical Robotics**,<br> **Soft Machine**,<br> **Medical Mechatronics**."
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "YUE, Wenchao<center>"
   avatar           : "images/chad.jpg"
-  bio              : "M.S.@ NUS | Ph.D.@ CUHK | CTO@ **Rodeep Ltd**"
+  bio              : "M.S.@ NUS | Ph.D.@ CUHK | CTO @ Rodeep Ltd"
   location         : "Shatin, NT, Hong Kong"
   employer         :
   pubmed           : 
