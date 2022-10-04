@@ -21,6 +21,16 @@ I am a 2nd-year Ph.D. student in <a href='http://www.ee.cuhk.edu.hk/en-gb/'>Depa
 
 My main research vision is to build autonomous dynamic tactile generation module based on multimodal fusion (vision+tactile), which enables the surgical robot to autonomously and efficiently acquire biological properties (such as tissue's elastic modulus) during operation through only millimeter-scale contact depth. In this way, I firmly believe that it safely provides the surgeon with more information through physical interaction beyond the single visual information input, creating a more immersive and comprehensive view of the surgery. Also, I am also interested and dedicated to developing inspiring and new generation of medical devices based on deployable mechanisms, origami structure, soft machines, and etc.
 
+# 📖 Academic Educations
+- *2021 - now*,  Ph.D., Department of Electronic Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong.
+- *2020 - 2021*, M.S., Department of Mechanical Engineering, National University of Singapore, Singapore 
+- *2016 - 2020*, B.Eng, Department of Mechanical Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing, Jiangsu, China.
+
+# 🐾 Research Visiting
+- *2021 - 2021*, Winter School, Soft Robotics, University of Cambridge, Ivry-sur-Seine, Paris, France.  
+_Fundamentals of smart (self healing, sensing, actuating) materials, biology and design, actuation, sensing and control/AI in soft robotics_
+- *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.  
+_The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
 
 # 🔥 News
 - *07.2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
@@ -48,17 +58,6 @@ My main research vision is to build autonomous dynamic tactile generation module
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📖 Academic Educations
-- *2021 - now*,  Ph.D., Department of Electronic Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong.
-- *2020 - 2021*, M.S., Department of Mechanical Engineering, National University of Singapore, Singapore 
-- *2016 - 2020*, B.Eng, Department of Mechanical Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing, Jiangsu, China.
-
-# 🐾 Research Visiting
-- *2021 - 2021*, Winter School, Soft Robotics, University of Cambridge, Ivry-sur-Seine, Paris, France.  
-_Fundamentals of smart (self healing, sensing, actuating) materials, biology and design, actuation, sensing and control/AI in soft robotics_
-- *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.  
-_The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
 
 # 💬 Invited Talks
 - *14.11.2021*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
