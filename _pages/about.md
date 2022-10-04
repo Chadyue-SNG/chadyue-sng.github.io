@@ -17,10 +17,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# Short Academic Bio
-Wenchao is a 2nd-year Ph.D. student at Medical Mechatronics Lab, the Department of Electronic Engineering, The Chinese University of Hong Kong, supervised by Prof. Hongliang Ren and Prof. Laschi Cecilia. Before that, he received M.Sc. degree of the Department of Mechanical Engineering from National University of Singapore in 2021. His research interests are mainly about source-constrained medical image computing and computer assisted intervention in a data-centric viewpoint. Topics that I am currently working on: synthetic data generation, domain adaptation and generalization, etc.
+I am a 2nd-year Ph.D. student at Medical Mechatronics Lab, the Department of Electronic Engineering, The Chinese University of Hong Kong, supervised by Prof. Hongliang Ren and Prof. Laschi Cecilia. Before that, I received M.Sc. degree of the Department of Mechanical Engineering from National University of Singapore in 2021, supervised by Prof. Hongliang Ren and Prof. Laschi Cecilia. My research vision is to build autonomous dynamic tactile generation module based on multimodal fusion （vision+tactile), which enables the surgical robot to autonomously and efficiently acquire biological properties (such as tissue's elastic modulus) during surgery through only a slight contact depth within the millimeter scale. In this way, I firmly believe that it provides the surgeon with more information through physical interaction beyond the single visual information input, creating a more immersive and comprehensive view of the surgery.
 
-# Too Long One
+
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
