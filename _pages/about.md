@@ -63,5 +63,7 @@ _The only candidate selected among Mechanical Engineering students (academic yea
 # 💬 Invited Talks
 - *14.11.2021*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 💻 Teaching
+- *2022.09 - 2022.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
+- *2022.01 - 2022.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
+- *2021.09 - 2021.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
