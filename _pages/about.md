@@ -34,7 +34,7 @@ My main research vision is to build autonomous dynamic tactile generation module
 - *2016 - 2020*, B.Eng, Department of Mechanical Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing, Jiangsu, China.
 
 # 🐾 Research Visiting
-- *2021 - 2021*, Winter School, Soft Robotics, University of Cambridge, Ivry-sur-Seine, Paris, France.  
+- *2021 - 2021*, Winter School, Soft Robotics, University of Cambridge, Cambridge, England.  
 _Fundamentals of smart (self healing, sensing, actuating) materials, biology and design, actuation, sensing and control/AI in soft robotics_
 - *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.  
 _The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
