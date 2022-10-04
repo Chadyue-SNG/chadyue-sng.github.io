@@ -24,12 +24,12 @@ author:
   name             : "YUE, Wenchao 岳文超"
   avatar           : "images/chad.jpg"
   bio              : "M.S.@ NUS | Ph.D.@ CUHK | CTO @ Rodeep Ltd"
-  location         : "Shatin, New Territories, Hong Kong"
+  location         : "Shatin, NT, Hong Kong"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=KheeXAMAAAAJ&hl=ko"
   email            : "wenchao.yue@link.cuhk.edu.hk"
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : "https://www.researchgate.net/profile/Wenchao-Yue"
   uri              :
   bitbucket        :
   codepen          :
@@ -43,7 +43,7 @@ author:
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : # e.g., "linkedin username"
+  linkedin         : "https://www.linkedin.com/in/wenchao-yue-a87730200/"
   dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
   orcid            : "https://orcid.org/0000-0002-9788-3705"
   pinterest        :
