@@ -17,8 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# Short Bio
-Hi, I am Wenchao Yue.
+# Short Academic Bio
+I am currently a second year (2021-2025) Ph.D. student at Medical Mechatronics Lab of the Department of Electronic Engineering, The Chinese University of Hong Kong, supervised by Prof. Hongliang Ren and Prof. Hongliang Ren. Before that, I worked with Dr. Hao Wang and Prof. Chengkuo Lee in the Department of Electrical and Computer Engineering, National University of Singapore and received my M.Sc. degree in 2019. From 2014 to 2018, I studied in Soochow University and received B.Eng. degree in Information Engineering.
+
+My research interests are mainly about source-constrained medical image computing and computer assisted intervention in a data-centric viewpoint. Topics that I am currently working on: synthetic data generation, domain adaptation and generalization, etc.
+
 # Too Long One
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
