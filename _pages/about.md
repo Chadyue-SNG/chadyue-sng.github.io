@@ -28,18 +28,6 @@ My main research vision is to build autonomous dynamic tactile generation module
 - *07.2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131, 2022)
 - *06.2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
 
-# 📖 Academic Educations
-- *2021 - now*,  Ph.D., Department of Electronic Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong.
-- *2020 - 2021*, M.S., Department of Mechanical Engineering, National University of Singapore, Singapore 
-- *2016 - 2020*, B.Eng, Department of Mechanical Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing, Jiangsu, China.
-
-# 🐾 Research Visiting
-- *2021 - 2021*, Winter School, Soft Robotics, University of Cambridge, Cambridge, England.  
-_Fundamentals of smart (self healing, sensing, actuating) materials, biology and design, actuation, sensing and control/AI in soft robotics_
-- *2019 - 2020*, E.S.P., Mechanics & Aircraft Structure, Institut Polytechnique des Sciences Avancées, Ivry-sur-Seine, Paris, France.  
-_The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
-
-
 # 📝 Publications 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
