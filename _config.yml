@@ -21,9 +21,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "<center>YUE, Wenchao<center>"
+  name             : "YUE, Wenchao<center>"
   avatar           : "images/chad.jpg"
-  bio              : "Ph.D.@ CUHK|M.S.@ NUS|CTO@ Rodeep Ltd"
+  bio              : "Ph.D.@CUHK|M.S.@NUS |CTO@ Rodeep Ltd"
   location         : "Shatin, NT, Hong Kong"
   employer         :
   pubmed           : 
