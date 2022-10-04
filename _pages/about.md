@@ -61,8 +61,7 @@ _Fundamentals of smart (self healing, sensing, actuating) materials, biology and
 _The only candidate selected among Mechanical Engineering students (academic year 2019/2020), fully funded by China Scholarship Council_
 
 # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *14.11.2021*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
 
 # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
