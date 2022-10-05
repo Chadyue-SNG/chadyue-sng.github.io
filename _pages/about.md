@@ -41,7 +41,7 @@ IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors (Basel)</div><img src='images/RA_L_cover.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors (Basel)</div><img src='images/Sensors_cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Origami-Inspired Structure with Pneumatic-Induced Variable Stiffness for Multi-DOF Force-Sensing](https://www.mdpi.com/1424-8220/22/14/5370)
