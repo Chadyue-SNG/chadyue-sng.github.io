@@ -52,7 +52,7 @@ Sensors-[Special Issue Advances in Tactile Sensing and Robotic Grasping](https:/
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Actuators</div><img src='images/Sensors_cover.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Actuators</div><img src='images/Actuators_cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Deployable Tubular Mechanisms Integrated with Magnetic Anchoring and Guidance System](https://www.mdpi.com/2076-0825/11/5/124)
