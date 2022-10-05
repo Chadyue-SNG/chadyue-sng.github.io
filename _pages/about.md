@@ -73,7 +73,17 @@ Zhang Yingxuan, Wei Xiaoyong, **Yue Wenchao**, Zhu Chengjun and Ju Feng*.
 Smart Materials and Structures
 </div>
 </div>
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE Sensors Journal</div><img src='images/IEEESensors_cover.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Dynamic piezoelectric tactile sensor for tissue hardness measurement using symmetrical flexure hinges and anisotropic vibration modes](https://ieeexplore.ieee.org/abstract/document/9446118)
+
+**Yue Wenchao**, Ju Feng, Zhang Yingxuan, Yun Yahui, Li Tianliang, Tse Zion Tsz Ho and Ren Hongliang*
+
+IEEE Sensors Journal
+</div>
+</div>
 
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
