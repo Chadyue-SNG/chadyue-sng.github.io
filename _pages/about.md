@@ -37,7 +37,7 @@ My main research vision is to build autonomous dynamic tactile generation module
 
 Yuan Sishen, Cao Sifan, Xue Junnan, Su Shijian, Yan Junyan, Wang Min, **Yue Wenchao**, Cheng Shing Shin, Liu Jun, Wang Jiaole, Song Shuang, Meng, Max Q.-H, Ren Hongliang
 
-IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022
+IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on Intelligent Robots and Systems (IROS) 2022
 </div>
 </div>
 
