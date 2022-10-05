@@ -57,7 +57,7 @@ Sensors-[Special Issue Advances in Tactile Sensing and Robotic Grasping](https:/
 
 [Deployable Tubular Mechanisms Integrated with Magnetic Anchoring and Guidance System](https://www.mdpi.com/2076-0825/11/5/124)
 
-**Yue Wenchao**, Tang Ruijie Tang, Wong Joei Simin, and Ren Hongliang*.
+**Yue Wenchao**, Tang Ruijie, Wong Joei Simin, and Ren Hongliang*.
 
 Actuators-[Special Issue Advancements in Actuation, Sensing, and Control Schemes for Intelligent Medical Robotics](https://www.mdpi.com/journal/actuators/special_issues/actuation_sensing_robotics)
 </div>
