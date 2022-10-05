@@ -48,7 +48,7 @@ IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on
 
 **Yue Wenchao**, Qi Jiaming, Song Xiao, Fan Shicheng, Giancarlo Fortino, Chen Chia-Hung, Xu Chenjie, and Ren Hongliang*.
 
-[Sensors-Special Issue Advances in Tactile Sensing and Robotic Grasping](https://www.mdpi.com/journal/sensors/special_issues/TSRG)
+Sensors-[Special Issue Advances in Tactile Sensing and Robotic Grasping](https://www.mdpi.com/journal/sensors/special_issues/TSRG)
 </div>
 </div>
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
