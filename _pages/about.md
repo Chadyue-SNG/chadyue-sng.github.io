@@ -35,12 +35,22 @@ My main research vision is to build autonomous dynamic tactile generation module
 
 [Versatile Motion Generation of Magnetic Origami Spring Robots in the Uniform Magnetic Field](https://ieeexplore.ieee.org/document/9842307)
 
-Yuan Sishen, Cao Sifan, Xue Junnan, Su Shijian, Yan Junyan, Wang Min, **Yue Wenchao**, Cheng Shing Shin, Liu Jun, Wang Jiaole, Song Shuang, Meng, Max Q.-H, Ren Hongliang
+Yuan Sishen, Cao Sifan, Xue Junnan, Su Shijian, Yan Junyan, Wang Min, **Yue Wenchao**, Cheng Shing Shin, Liu Jun, Wang Jiaole, Song Shuang, Meng, Max Q.-H*, and Ren Hongliang*
 
 IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on Intelligent Robots and Systems (IROS) 2022
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors (Basel)</div><img src='images/RA_L_cover.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Origami-Inspired Structure with Pneumatic-Induced Variable Stiffness for Multi-DOF Force-Sensing](https://www.mdpi.com/1424-8220/22/14/5370)
+
+**Yue Wenchao**, Qi Jiaming, Song Xiao, Fan Shicheng, Giancarlo Fortino, Chen Chia-Hung, Xu Chenjie, and Ren Hongliang*.
+
+[Sensors-Special Issue Advances in Tactile Sensing and Robotic Grasping](https://www.mdpi.com/journal/sensors/special_issues/TSRG)
+</div>
+</div>
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
 # 🎖 Honors and Awards
