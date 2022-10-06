@@ -88,7 +88,7 @@ IEEE Sensors Journal
 
 
 # 💬 Invited Talks
-- *14.11.2021*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
+- *14.11.2020*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
 
 # 💻 Teaching
 - *2022.09 - 2022.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
