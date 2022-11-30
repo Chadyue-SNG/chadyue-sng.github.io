@@ -24,7 +24,7 @@ My main research vision is to build autonomous dynamic tactile generation module
 - *11/2022*: Our proposed project on "AI-based Pulmonary Tree-branch Reconstruction for Precise Motion Planning in Personalized Robotic-assisted Bronchoscope Intervention" has been finalisted and won forth-place award.
 - *07/2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
 - *07/2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. (IF=3.847, 2022)
-- *05/2022*: Our Project "Magnetic Capsule Robots" and "Modular Parallel Robot" win Third-place Award and Merit Award in The 8th Hong Kong University Student Innovation and Entrepreneurship Competition. Many thanks for the continous help from Prof. Ren and Sishen!
+- *05/2022*: Our Project "Magnetic Capsule Robots" and "Modular Parallel Robot" win Third-place Award and Merit Award in The 8th Hong Kong University Student Innovation and Entrepreneurship Competition. Many thanks for the generous and continuing help from Prof. Ren and Sishen!
 - *04/2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523, 2022)
 - *11/2021*: Our Project "Magnetically-Connected Modular-Reconfigurable Mini-Robot Towards Minimally Invasive Procedures" wins Merit Award in Emedic Global 2021.
 - *08/2021*: Moving from SG to HK for my doctoral study.
