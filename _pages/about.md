@@ -52,7 +52,7 @@ IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on
 
 **Yue Wenchao**, Qi Jiaming, Song Xiao, Fan Shicheng, Giancarlo Fortino, Chen Chia-Hung, Xu Chenjie, and Ren Hongliang*.
 
-Sensors-[Special Issue Advances in Tactile Sensing and Robotic Grasping](https://www.mdpi.com/journal/sensors/special_issues/TSRG)
+Sensors - Multidisciplinary Digital Publishing Institute (MDPI)
 </div>
 </div>
 
@@ -63,7 +63,7 @@ Sensors-[Special Issue Advances in Tactile Sensing and Robotic Grasping](https:/
 
 **Yue Wenchao**, Tang Ruijie, Wong Joei Simin, and Ren Hongliang*.
 
-Actuators-[Special Issue Advancements in Actuation, Sensing, and Control Schemes for Intelligent Medical Robotics](https://www.mdpi.com/journal/actuators/special_issues/actuation_sensing_robotics)
+Actuators - Multidisciplinary Digital Publishing Institute (MDPI)
 </div>
 </div>
 
@@ -94,6 +94,7 @@ IEEE Sensors Journal
 - *14.11.2020*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
 
 # 💻 Teaching
+- *2023.01 - 2023.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
 - *2022.09 - 2022.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
 - *2022.01 - 2022.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
 - *2021.09 - 2021.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
