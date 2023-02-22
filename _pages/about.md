@@ -21,7 +21,7 @@ I am **YUE Wenchao**, a passionate about solving technically challenging problem
 My main research vision is to build autonomous dynamic tactile generation module based on multimodal fusion (vision+tactile), which enables the surgical robot to autonomously, safely and efficiently acquire biological properties (such as tissue's elastic modulus) during operation through only millimeter-scale contact depth. Recently, I am working on developing a novel surgical robotic dynamic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
 
 # 🔥 News
-- *12/2022*: One paper about deep reinforcement learning based tumor palpation is accepted by 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, 2022)
+- *12/2022*: One paper about deep reinforcement learning based robotic palpation strategy is accepted by 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, 2022)
 - *11/2022*: One paper about laminated continuum robot with gripping force-sensing forceps is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
 - *11/2022*: Our proposed project on "AI-based Pulmonary Tree-branch Reconstruction for Precise Motion Planning in Personalized Robotic-assisted Bronchoscope Intervention" has been finalisted and won forth-place award in AI x HK OpenCup 2022.
 - *07/2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
