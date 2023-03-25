@@ -23,7 +23,6 @@ My main research vision is to build autonomous dynamic tactile generation module
 Recently, I am working on developing a novel surgical robotic dynamic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
 
 # 🔥 News
-<div style="height:300px;overflow-y:auto"></div>
 - *12/2022*: One paper about deep reinforcement learning based robotic palpation strategy is accepted by 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, 2022)
 - *11/2022*: One paper about laminated continuum robot with gripping force-sensing forceps is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
 - *11/2022*: Our proposed project on "AI-based Pulmonary Tree-branch Reconstruction for Precise Motion Planning in Personalized Robotic-assisted Bronchoscope Intervention" has been finalisted and won forth-place award in AI x HK OpenCup 2022.
