@@ -20,7 +20,7 @@ I am **YUE Wenchao**, a passionate about solving technically challenging problem
 
 My main research vision is to build autonomous dynamic tactile generation module based on multimodal fusion (vision+tactile), which enables the surgical robot to autonomously, safely, and efficiently acquire biological properties (such as tissue's elastic modulus) during operation through only millimeter-scale contact depth. 
 
-Recently, I am working on developing a novel surgical robotic dynamic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
+Recently, I am working on developing a novel surgical robotic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
 
 # 🔥 News
 - *12/2022*: One paper about deep reinforcement learning based robotic palpation strategy is accepted by 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, 2022)
