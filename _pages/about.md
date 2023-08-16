@@ -97,6 +97,7 @@ IEEE Sensors Journal
 - *14.11.2020*, Invited Speaker, Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes, International Conference on Intelligent Equipment and Robots, 2020. 
 
 # 💻 Teaching
+- *2023.09 - 2023.12*, Teaching Assistant - ENGG 2760C Probability for Engineers
 - *2023.01 - 2023.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
 - *2022.09 - 2022.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
 - *2022.01 - 2022.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
