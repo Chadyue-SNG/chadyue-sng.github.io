@@ -94,8 +94,8 @@ IEEE Sensors Journal
 
 
 # 💬 Invited Talks
-- *28.07.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, topic title "Magnetically-connected Modular Reconfigurable Robots", Roadshow of the CUHK Robotics Open Day, 2023.
--*07.01.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, Hong Kong Science Popularization Program Series IV - Fellow' Talks on Science Popularization Activities Hosted by Centre for Artificial Intelligence and Robotics (CAIR) Hong Kong and The Greater Bay Area Association of Academicians(GBAAA), 2023. [Link](https://www.cair-cas.org.hk/article/157)
+- *28.07.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, topic title "Magnetically-connected Modular Reconfigurable Robots", Roadshow of the CUHK Robotics Open Day hosted by T Stone Robotics Institute, 2023. [Link](https://www.cpr.cuhk.edu.hk/en/press/cuhk-robotics-open-day-and-collaboration-agreement-signing-ceremony-with-hkstp-lenovo-and-hkclr/)
+- *07.01.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, Hong Kong Science Popularization Program Series IV - Academic Talks on Science Popularization Activities hosted by Centre for Artificial Intelligence and Robotics (CAIR) Hong Kong and The Greater Bay Area Association of Academicians(GBAAA), 2023. [Link](https://www.cair-cas.org.hk/article/157)
 - *14.11.2020*, Invited Speaker, "Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes", International Conference on Intelligent Equipment and Robots. 
 
 # 💻 Teaching Experience
