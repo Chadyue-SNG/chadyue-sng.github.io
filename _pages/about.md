@@ -99,7 +99,12 @@ IEEE Sensors Journal
 Academician Talks Activities hosted by Centre for Artificial Intelligence and Robotics (CAIR) Hong Kong and The Greater Bay Area Association of Academicians(GBAAA), 2023. [Link](https://www.cair-cas.org.hk/article/157)
 - *14.11.2020*, Invited Speaker, "Dynamic Piezoelectric Tactile Sensing using Symmetrical Structure of Flexure Hinges and Anisotropic Vibration Modes", International Conference on Intelligent Equipment and Robots. 
 
-# 💻 Teaching Experience
+# 👨‍🔧 Mentoring Experience
+"If I have seen further than others, it is by standing upon the shoulders of giants." - Isaac Newton
+
+By combining my passion for empowering others, sharing knowledge, building relationships, making a positive impact, and embracing continual learning, mentoring becomes an enriching and rewarding experience for both me and my mentees.
+
+</div>
 - *2023.09 - 2023.12*, Teaching Assistant - ENGG 2760C Probability for Engineers
 - *2023.01 - 2023.04*, Teaching Assistant - ELEG 3103 Robotic Perception and Intelligence
 - *2022.09 - 2022.12*, Teaching Assistant - ENGG 2760B Probability for Engineers
