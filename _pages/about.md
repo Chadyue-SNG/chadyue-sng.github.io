@@ -93,7 +93,7 @@ IEEE Sensors Journal
 </div>
 
 
-# 💬 Invited Talks
+# 💬 Community Contribution
 - *28.07.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, "Magnetically-connected Modular Reconfigurable Robots", Roadshow of the CUHK Robotics Open Day hosted by T Stone Robotics Institute, 2023. [Link](https://www.cpr.cuhk.edu.hk/en/press/cuhk-robotics-open-day-and-collaboration-agreement-signing-ceremony-with-hkstp-lenovo-and-hkclr/)
 - *07.01.2023*, Invited Speaker on behalf of Medical Mechatronics Lab, Hong Kong Science Popularization Program Series IV - 
 Academician Talks Activities hosted by Centre for Artificial Intelligence and Robotics (CAIR) Hong Kong and The Greater Bay Area Association of Academicians(GBAAA), 2023. [Link](https://www.cair-cas.org.hk/article/157)
