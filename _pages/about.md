@@ -39,7 +39,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Advanced Engineering Materials (Cover Invited)</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Dual-Stroke Soft Peltier Pouch Motor Based on PipelessThermo-Pneumatic Actuation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202301408)
+[Dual-Stroke Soft Peltier Pouch Motor Based on Pipeless Thermo-Pneumatic Actuation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202301408)
 
 **W. Yue**, C. Bai, J. Lai, H. Ren*
 
