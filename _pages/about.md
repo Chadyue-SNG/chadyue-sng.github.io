@@ -47,7 +47,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">To Appear Soon</div><img src='images/RoboticMN_cover.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">To Appear Soon</div><img src='images/RoboticMN_cover.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Multimodal Mechanical Stimuli Enables Depth Self-Awareness and Transdermal Drug Diffusion Acceleration based on Robotic Microneedles Patches and Optical Coherence Tomography**
