@@ -1,4 +1,4 @@
 - 😍 Welcome to my page!
 - 🌐 This is my personal website [https://chadyue-sng.github.io/](https://chadyue-sng.github.io/).
-- 📅 Last major update in November 2022. 
+- 📅 Last major update in March 2024. 
 - 📧 wenchao.yue [at] link [dot] cuhk [dot] edu [dot] hk
