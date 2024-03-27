@@ -40,7 +40,9 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">To Appear Soon</div><img src='images/RoboticMN_cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Multimodal Mechanical Stimuli Enables Depth Self-Awareness and Transdermal Drug Diffusion Acceleration based on Robotic Microneedles Patches and Optical Coherence Tomography]
+Multimodal Mechanical Stimuli Enables Depth Self-Awareness and Transdermal Drug Diffusion Acceleration based on Robotic Microneedles Patches and Optical Coherence Tomography
+
+The objective of our project is to pioneer a groundbreaking robot-assisted transdermal immunization approach, which integrates medical robotics, optical imaging, microneedle technology, and artificial intelligence algorithms. We aim to revolutionize the field of minimally invasive immunization by enabling comprehensive monitoring of the entire process and achieving a highly advanced approach to immunization.
 
 
 Under Going
