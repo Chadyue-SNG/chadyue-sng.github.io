@@ -23,17 +23,19 @@ My main research vision is to build an autonomous dynamic tactile generation mod
 Recently, I am working on developing a multimodal surgical robotic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
 
 # 🔥 News
-- *12/2022*: One paper about deep reinforcement learning based robotic palpation strategy is accepted by 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, 2022)
-- *11/2022*: One paper about laminated continuum robot with gripping force-sensing forceps is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
-- *11/2022*: Our proposed project on "AI-based Pulmonary Tree-branch Reconstruction for Precise Motion Planning in Personalized Robotic-assisted Bronchoscope Intervention" has been finalisted and won forth-place award in AI x HK OpenCup 2022.
-- *07/2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. (IF=4.325, 2022)
-- *07/2022*: One paper about origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. (IF=3.847, 2022)
-- *05/2022*: Our Project "Magnetic Capsule Robots" and "Modular Parallel Robot" win Third-place Award and Merit Award in The 8th Hong Kong University Student Innovation and Entrepreneurship Competition. Many thanks for generous and continuing help from Prof. Ren and Sishen!
-- *04/2022*: One paper about deployable tubular mechanisms is accepted by Actuators. (IF=2.523, 2022)
+- *12/2023*: One poster about the soft pouch motor has won a second-place award at The 8th Chinese Annual Seminar on Soft Robotic Theory and Technology. (Shenzhen, China, 2023)
+- *11/2023*: One journal paper about soft pouch motors based on liquid-to-gas phase transition is accepted and selected as the front cover.
+- *12/2022*: One paper about deep reinforcement learning-based robotic palpation strategy is accepted by the 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, China, 2022)
+- *11/2022*: One paper about a laminated continuum robot with gripping force-sensing forceps is accepted by IEEE Sensors Journal. 
+- *11/2022*: Our proposed project on "AI-based Pulmonary Tree-branch Reconstruction for Precise Motion Planning in Personalized Robotic-assisted Bronchoscope Intervention" has been finalisted and won the fourth-place award in AI x HK OpenCup 2022.
+- *07/2022*: One paper about magnetic origami spring robots is accepted by IEEE Robotics and Automation Letters (RAL) with the option of IEEE International Conference on Intelligent Robots and Systems (IROS) 2022. 
+- *07/2022*: One paper about the origami-inspired structure for multi-DOF force-sensing is accepted by Sensors. 
+- *05/2022*: Our Projects "Magnetic Capsule Robots" and "Modular Parallel Robot" won the Third-place Award and Merit Award in The 8th Hong Kong University Student Innovation and Entrepreneurship Competition. Many thanks for the generous and continuing help from Prof. Ren and Sishen!
+- *04/2022*: One paper about deployable tubular mechanisms is accepted by Actuators. 
 - *11/2021*: Our Project "Magnetically-Connected Modular-Reconfigurable Mini-Robot Towards Minimally Invasive Procedures" wins Merit Award in Emedic Global 2021.
 - *08/2021*: Moving from SG to HK for my doctoral study.
-- *07/2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures. (IF=4.131, 2022)
-- *06/2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal. (IF=4.325, 2022)
+- *07/2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures.
+- *06/2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal.
 
 # 📝 Publications 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Advanced Engineering Materials (Cover Invited)</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="100%"></div></div>
