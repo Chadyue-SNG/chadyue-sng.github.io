@@ -58,7 +58,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 -Enabling sensing capabilities for soft balloon actuators allows for better control and understanding of their deformation behavior.
 
-</div>
+
 </div>
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-between;">
