@@ -61,16 +61,6 @@ Brief: the objective of our project is to pioneer a groundbreaking robot-assiste
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L with IROS 2022</div><img src='images/RA_L_cover.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Versatile Motion Generation of Magnetic Origami Spring Robots in the Uniform Magnetic Field](https://ieeexplore.ieee.org/document/9842307)
-
-Yuan Sishen, Cao Sifan, Xue Junnan, Su Shijian, Yan Junyan, Wang Min, **Yue Wenchao**, Cheng Shing Shin, Liu Jun, Wang Jiaole, Song Shuang, Meng, Max Q.-H, and Ren Hongliang*
-
-IEEE Robotics and Automation Letters (RAL) with IEEE International Conference on Intelligent Robots and Systems (IROS) 2022
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors</div><img src='images/Sensors_cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
