@@ -34,8 +34,8 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 - *04/2022*: One paper about deployable tubular mechanisms is accepted by Actuators. 
 - *11/2021*: Our Project "Magnetically-Connected Modular-Reconfigurable Mini-Robot Towards Minimally Invasive Procedures" wins Merit Award in Emedic Global 2021.
 - *08/2021*: Moving from SG to HK for my doctoral study.
-- *07/2021*: One paper about dual-mode tactile hardness sensor is accepted by Smart Materials and Structures.
-- *06/2021*: One paper about dynamic piezoelectric tactile sensor is accepted by IEEE Sensors Journal.
+- *07/2021*: One paper about dual-mode tactile hardness sensors is accepted by Smart Materials and Structures.
+- *06/2021*: One paper about dynamic piezoelectric tactile sensors is accepted by IEEE Sensors Journal.
 
 # 📝 Publications 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Advanced Engineering Materials (Cover Invited)</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="100%"></div></div>
@@ -57,6 +57,11 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 **Soft Balloon Actuators Embodied Flexible Ink-Transfer-Printing Sensing for Self-Awareness Inflation and Microneedle Punch**
 
 -Enabling sensing capabilities for soft balloon actuators allows for better control and understanding of their deformation behavior.
+
+<!-- <div class='paper-box'> -->
+<div class='paper-box' style="display: flex; justify-content: space-between;">
+<div class='paper-box-image'><div><div class="badge">Pop-Up Illustration</div><img src='images/Beating_Balloon.gif' alt="sym" width="100%"></div></div>
+</div>
 
 </div>
 </div>
