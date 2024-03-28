@@ -23,7 +23,7 @@ My main research vision is to build an autonomous dynamic tactile generation mod
 Recently, I am working on developing a multimodal surgical robotic tactile interface based on a Collaborative Research Fund (CRF) project funded by the Hong Kong Research Grants Council (RGC). 
 
 # 🔥 News
-- *12/2023*: One poster about the soft pouch motor has won a second-place award at The 8th Chinese Annual Seminar on Soft Robotic Theory and Technology. (Shenzhen, China, 2023)
+- *12/2023*: One poster about the soft pouch motor has won a second-place award at the 8th Chinese Annual Seminar on Soft Robotic Theory and Technology. (Shenzhen, China, 2023)
 - *11/2023*: One journal paper about soft pouch motors based on liquid-to-gas phase transition is accepted and selected as the front cover.
 - *12/2022*: One paper about deep reinforcement learning-based robotic palpation strategy is accepted by the 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO). (Xishuangbanna, China, 2022)
 - *11/2022*: One paper about a laminated continuum robot with gripping force-sensing forceps is accepted by IEEE Sensors Journal. 
