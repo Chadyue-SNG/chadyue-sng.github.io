@@ -56,7 +56,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 **Soft Balloon Actuators Embodied Flexible Ink-Transfer-Printing Sensing for Self-Awareness Inflation and Microneedle Punch**
 
--Enabling sensing capabilities for soft balloon actuators allows for better control and understanding of their deformation behavior.
+-Embodying sensing capabilities for soft balloon actuators allow for better control and understanding of their deformation behavior.
 
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-between;">
