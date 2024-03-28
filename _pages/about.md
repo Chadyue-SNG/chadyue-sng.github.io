@@ -60,6 +60,8 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 -Sensing capabilities in soft balloon actuators improve safety in human-machine interactions reducing the risk of over-inflation.
 
+-Sensing capabilities in soft balloon actuators improve safety in human-machine interactions reducing the risk of over-inflation.
+
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-between;">
 <div class='paper-box-image'><div><div class="badge">Pop Up from 2D Plane</div><img src='images/Beating_Balloon.gif' alt="sym" width="110%"></div></div>
