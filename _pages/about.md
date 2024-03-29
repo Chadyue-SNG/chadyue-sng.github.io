@@ -101,8 +101,8 @@ Brief: the objective of our project is to pioneer a groundbreaking robot-assiste
 **RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy**
 
 - Visualize hands-on information & Localize the trachea regions more efficiently;
-- Enable visual-tactile guidance for robotic tracheotomy;
-- Promote surgical sub-task autonomy.
+- Enable **visual-tactile guidance** for robotic tracheotomy;
+- Promote **surgical sub-task autonomy**.
 
 </div>
 </div>
