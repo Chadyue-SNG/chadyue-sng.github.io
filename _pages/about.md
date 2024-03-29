@@ -46,6 +46,9 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 **W. Yue**, C. Bai, J. Lai, H. Ren*
 - Proposed the novel soft pouch motor based on the pipeless thermo-pneumatic actuation [**bi-directional liquid-to-gas phase transition**] 
 
+</div>
+</div>
+
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-evenly;">
   <div class='paper-box-image'><div><div class="badge">Structure Details</div><img src='images/PPM_cover.png' alt="sym" width="100%"></div></div>
