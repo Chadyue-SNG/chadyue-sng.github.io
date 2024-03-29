@@ -50,7 +50,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: center;">
-  <div class='paper-box-image'><div><div class="badge">Principle Behind</div><img src='images/PPM_cover.png' alt="sym" width="100%"></div></div>
+  <div class='paper-box-image'><div><div class="badge">Principle Behind</div><img src='images/PPM_cover.png' alt="sym" width="200%"></div></div>
 </div>
 
 
@@ -58,7 +58,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 </div>
 
 <!-- <div class='paper-box'> -->
-<div class='paper-box' style="display: flex; justify-content: space-between;">
+<div class='paper-box' style="display: flex; justify-content: center;">
   <div class='paper-box-image'><div><div class="badge">Hovering In Liquid</div><img src='images/Floating_Cover.gif' alt="sym" width="150%"></div></div>
   <div class='paper-box-image'><div><div class="badge">Untether Rolling On Land</div><img src='images/Rolling_Process.gif' alt="sym" width="150%"></div></div>
 </div>
