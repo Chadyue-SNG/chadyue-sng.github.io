@@ -44,7 +44,13 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 [Dual-Stroke Soft Peltier Pouch Motor Based on Pipeless Thermo-Pneumatic Actuation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202301408)
 
 **W. Yue**, C. Bai, J. Lai, H. Ren*
-- Proposed the novel soft pouch motor based on the pipeless thermo-pneumatic actuation [**bi-directional liquid-to-gas phase transition**] 
+- Proposed the novel soft pouch motor based on the pipeless thermo-pneumatic actuation [**bi-directional liquid-to-gas phase transition**]
+- 
+- <!-- <div class='paper-box'> -->
+<div class='paper-box' style="display: flex; justify-content: space-evenly;">
+  <div class='paper-box-image'><div><div class="badge">Structure Details</div><img src='images/PPM_cover.png' alt="sym" width="150%"></div></div>
+</div>
+
 
 </div>
 </div>
@@ -55,8 +61,6 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
   <div class='paper-box-image'><div><div class="badge">Untethered Rolling</div><img src='images/Rolling_Process.gif' alt="sym" width="115%"></div></div>
 </div>
 
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Advanced Engineering Materials - under review</div><img src='images/TattooBalloon_Cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
