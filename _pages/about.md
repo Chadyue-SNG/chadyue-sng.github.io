@@ -85,7 +85,7 @@ Brief: the objective of our project is to pioneer a groundbreaking robot-assiste
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE T-ASE (under 2nd Review)</div><img src='images/TASE_Cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy
+**RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy**
 
 - Visualize hands-on information & Localize the trachea regions more efficiently;
 - Enable visual-tactile guidance for robotic tracheotomy;
