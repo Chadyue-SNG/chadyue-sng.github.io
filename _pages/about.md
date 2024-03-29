@@ -63,8 +63,8 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-evenly;">
-<div class='paper-box-image'><div><div class="badge">Pop Up from 2D Plane</div><img src='images/Beating_Balloon.gif' alt="sym" width="110%"></div></div>
-  <div class='paper-box-image'><div><div class="badge">Touch Balloon!</div><img src='images/Touch_Process_Cover.gif' alt="sym" width="110%"></div></div>
+<div class='paper-box-image'><div><div class="badge">Pop Up from 2D Plane</div><img src='images/Beating_Balloon.gif' alt="sym" width="100%"></div></div>
+  <div class='paper-box-image'><div><div class="badge">Touch Balloon!</div><img src='images/Touch_Process_Cover.gif' alt="sym" width="100%"></div></div>
 </div>
 
 </div>
