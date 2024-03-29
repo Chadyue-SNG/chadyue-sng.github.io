@@ -131,17 +131,6 @@ Actuators - Multidisciplinary Digital Publishing Institute (MDPI)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Smart Materials and Structures</div><img src='images/SMS_cover.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[A dual-mode tactile hardness sensor for intraoperative tumor detection and tactile imaging in robot-assisted minimally invasive surgery](https://iopscience.iop.org/article/10.1088/1361-665X/ac112b/meta)
-
-Zhang Yingxuan, Wei Xiaoyong, **Yue Wenchao**, Zhu Chengjun and Ju Feng*.
-
-Smart Materials and Structures
-</div>
-</div>
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE Sensors Journal</div><img src='images/IEEESensors_cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
