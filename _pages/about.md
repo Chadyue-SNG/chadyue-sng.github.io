@@ -101,6 +101,8 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 
 **RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy**
 
+**Wenchao Yue**, Fan Bai, Jianbang Liu, Feng Ju, Max Q-H Meng, Chwee Ming Lim, Hongliang Ren
+
 - Visualize hands-on information & Localize the trachea regions more efficiently;
 - Enable **visual-tactile guidance** for robotic tracheotomy;
 - Promote **surgical sub-task autonomy**.
