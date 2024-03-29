@@ -49,7 +49,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 - Validated several application potentials in both **aquatic and terrestrial media environments**.
 
 <!-- <div class='paper-box'> -->
-<div class='paper-box' style="display: flex; justify-content: center;">
+<div class='paper-box' style="display: flex; justify-content: space-between;">
   <div class='paper-box-image'><div><div class="badge">Principle Behind</div><img src='images/PPM_cover.png' alt="sym" width="200%"></div></div>
 </div>
 
