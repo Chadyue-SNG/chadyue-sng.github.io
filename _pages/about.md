@@ -38,7 +38,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 - *06/2021*: One paper about dynamic piezoelectric tactile sensors is accepted by IEEE Sensors Journal.
 
 # 📝 Publications 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Front Cover Invited</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="90%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Front Cover Invited</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Dual-Stroke Soft Peltier Pouch Motor Based on Pipeless Thermo-Pneumatic Actuation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202301408)
