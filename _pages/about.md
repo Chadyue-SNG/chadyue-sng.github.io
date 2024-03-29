@@ -44,9 +44,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 [Dual-Stroke Soft Peltier Pouch Motor Based on Pipeless Thermo-Pneumatic Actuation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202301408)
 
 **W. Yue**, C. Bai, J. Lai, H. Ren*
-- The novel soft pouch motor based on the pipeless thermo-pneumatic actuation is proposed; the temperature gradient switching circuit is designed to facilitate phase-transition intervention.
-- The multilayer fabrication process and the hybrid heating and cooling mechanism of the PPM unit are described; its motorization performance is further quantified under different media environments.
-- Several application experiments are conducted based on single and multiple permutations of PPM units, to validate their hyper-modularity and adaptability.
+- Proposed the novel soft pouch motor based on the pipeless thermo-pneumatic actuation [**bi-directional liquid-to-gas phase transition**] 
 
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-evenly;">
