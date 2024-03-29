@@ -49,7 +49,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 <!-- <div class='paper-box'> -->
 <div class='paper-box' style="display: flex; justify-content: space-evenly;">
   <div class='paper-box-image'><div><div class="badge">Structure Details</div><img src='images/PPM_cover.png' alt="sym" width="100%"></div></div>
-  <div class='paper-box-image'><div><div class="badge">Untethered Rolling</div><img src='images/Rolling_Process.gif' alt="sym" width="100%"></div></div>
+  <div class='paper-box-image'><div><div class="badge">Untethered Rolling</div><img src='images/Rolling_Process.gif' alt="sym" width="110%"></div></div>
 </div>
 
 </div>
