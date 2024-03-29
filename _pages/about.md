@@ -37,7 +37,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 - *07/2021*: One paper about dual-mode tactile hardness sensors is accepted by Smart Materials and Structures.
 - *06/2021*: One paper about dynamic piezoelectric tactile sensors is accepted by IEEE Sensors Journal.
 
-# 📝 Publications 
+# 📝 Selected Publications 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Front Cover Invited</div><img src='images/AEM_Front_Cover.PNG' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
