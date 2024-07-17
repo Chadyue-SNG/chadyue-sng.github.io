@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "YUE Wenchao, Chad"
-description              : "Don't tell me, show me. - Eric Schmidt"
+description              : "Think In a Bayesian Way"
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : False
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "<center>YUE, Wenchao<center>"
   avatar           : "images/Chad_new2.jpg"
-  bio              : "M.S.@ NUS | Ph.D.@ CUHK | CTO @ Rodeep Ltd"
+  bio              : "M.S.@ NUS | Ph.D.@ CUHK"
   location         : "Shatin, NT, Hong Kong"
   employer         :
   pubmed           : 
