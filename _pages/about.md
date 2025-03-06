@@ -87,18 +87,6 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">To Appear Soon</div><img src='images/Robotic_MN_Cover1.gif' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**Multimodal Mechanical Stimuli Enables Depth Self-Awareness and Transdermal Drug Diffusion Acceleration based on Robotic Microneedles Patches and Optical Coherence Tomography**
-
-- Integrating medical robotics, optical imaging, microneedle technology, and artificial intelligence algorithms, the project aims to develop a robot-assisted transdermal immunization approach by enabling comprehensive monitoring of the entire process.
-
-**Interdisciplinary Collaborative Project with CUHK BME and CityU BME**
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE T-ASE (under 2nd Review)</div><img src='images/TASE_Cover.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
 **RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy**
 
 **Wenchao Yue**, Fan Bai, Jianbang Liu, Feng Ju, Max Q-H Meng, Chwee Ming Lim, Hongliang Ren*
