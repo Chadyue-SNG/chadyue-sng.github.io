@@ -84,7 +84,7 @@ Recently, I am working on developing a multimodal surgical robotic tactile inter
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">To Appear Soon</div><img src='images/Robotic_MN_Cover1.gif' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE T-ASE (ICRA25' Oral)</div><img src='images/TASE_Cover.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy**
