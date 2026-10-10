@@ -139,44 +139,6 @@ tr.pub video {
   border-radius: 4px;
 }
 
-ul.news {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-ul.news li {
-  margin: 0 0 6px 0;
-  padding-left: 7.5em;
-  text-indent: -7.5em;
-}
-
-ul.news .date {
-  display: inline-block;
-  width: 7em;
-  text-indent: 0;
-  color: #777;
-}
-
-details {
-  margin-top: 6px;
-}
-
-details summary {
-  cursor: pointer;
-  color: #1772d0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-details summary:hover {
-  color: #f09228;
-}
-
-details ul.news {
-  margin-top: 8px;
-}
-
 /* keep the 160px thumbnails from overflowing on narrow screens */
 @media (max-width: 480px) {
   tr.pub td:first-child {
