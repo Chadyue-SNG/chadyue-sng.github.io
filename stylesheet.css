@@ -119,9 +119,76 @@ h2 {
   width: 160px;
   height: 160px;
   position: absolute;
+  opacity: 0;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
+}
+
+/* reveal the hover media (video / second image) when the whole publication row is hovered */
+tr.pub:hover .two {
+  opacity: 1;
+}
+
+tr.pub img,
+tr.pub video {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+ul.news {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.news li {
+  margin: 0 0 6px 0;
+  padding-left: 7.5em;
+  text-indent: -7.5em;
+}
+
+ul.news .date {
+  display: inline-block;
+  width: 7em;
+  text-indent: 0;
+  color: #777;
+}
+
+details {
+  margin-top: 6px;
+}
+
+details summary {
+  cursor: pointer;
+  color: #1772d0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+details summary:hover {
+  color: #f09228;
+}
+
+details ul.news {
+  margin-top: 8px;
+}
+
+/* keep the 160px thumbnails from overflowing on narrow screens */
+@media (max-width: 480px) {
+  tr.pub td:first-child {
+    width: 30% !important;
+  }
+
+  tr.pub img,
+  .one,
+  .two {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 .fade {
