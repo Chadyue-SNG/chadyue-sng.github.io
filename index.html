@@ -943,7 +943,7 @@
           { city: 'Lausanne',  x: 360.8, y: 48.2,  role: 'Visiting Ph.D. researcher, EPFL', years: '2024\u20132025', lx: 9,  ly: 12,  anchor: 'start' },
           { city: 'Shenzhen',  x: 731.2, y: 130.9, role: 'Algorithm intern, MindOn Robotics', years: '2026', lx: -9, ly: -6,  anchor: 'end' },
           { city: 'Shanghai',  x: 756.8, y: 100.9, role: 'Research intern, Sharpa Robotics', years: '2026\u2013present', lx: 9, ly: 4, anchor: 'start', now: true },
-          // conferences: shown as markers, not part of the journey arcs
+          // conferences: teal diamonds, visited as side quests from wherever I was at the time
           { city: 'Atlanta',    x: 46.9,  y: 92.2,  role: 'ICRA 2025 \u2014 oral presentation of RASEC', years: '2025', lx: 0, ly: 17, anchor: 'middle', conf: true },
           { city: 'Pittsburgh', x: 62.1,  y: 69.2,  role: 'IROS 2026', years: '2026', lx: 9, ly: -6, anchor: 'start', conf: true },
           { city: 'Bangkok',    x: 684.5, y: 161.2, role: 'ROBIO 2024 \u2014 Best Student Paper Finalist', years: '2024', lx: -9, ly: 4, anchor: 'end', conf: true },
@@ -953,22 +953,43 @@
         var tip = document.getElementById('journey-tip'), box = document.getElementById('journey');
         function el(name, attrs) { var e = document.createElementNS(NS, name); for (var k in attrs) { e.setAttribute(k, attrs[k]); } return e; }
 
-        // arcs between consecutive stops (skipped when two stops sit on top of each other)
-        var arcs = [], J = STOPS.filter(function (st) { return !st.conf; });
-        for (var i = 1; i < J.length; i++) {
-          var a = J[i - 1], b = J[i], dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 6) { continue; }
-          var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lift = Math.min(0.17 * d, 58);
+        // The route in chronological order. 'main' = where I lived/studied/worked (blue);
+        // 'side' / 'back' = conference trips out and home again (teal); 'mark' = an event in the city I was already in.
+        // bow: +1 curves the arc north of the straight line, -1 south, so out and back legs do not overlap.
+        var I = {}; STOPS.forEach(function (st, k) { I[(st.conf ? 'conf:' : '') + st.city] = k; });
+        var LEGS = [
+          { from: I['Nanjing'],   to: I['Paris'],            kind: 'main', bow:  1 },   // 2019 exchange year
+          { from: I['Paris'],     to: I['Singapore'],        kind: 'main', bow: -1 },   // 2020 M.Sc.
+          { from: I['Singapore'], to: I['Hong Kong'],        kind: 'main', bow:  1 },   // 2021 Ph.D.
+          { from: I['Hong Kong'], to: I['Lausanne'],         kind: 'main', bow:  1 },   // Nov 2024 visiting EPFL
+          { from: I['Lausanne'],  to: I['conf:Bangkok'],     kind: 'side', bow:  1 },   // Dec 2024 ROBIO
+          { from: I['conf:Bangkok'], to: I['Lausanne'],      kind: 'back', bow: -1 },
+          { from: I['Lausanne'],  to: I['conf:Lausanne'],    kind: 'mark' },            // Apr 2025 RoboSoft, at home
+          { from: I['Lausanne'],  to: I['conf:Atlanta'],     kind: 'side', bow:  1 },   // May 2025 ICRA
+          { from: I['conf:Atlanta'], to: I['Lausanne'],      kind: 'back', bow: -1 },
+          { from: I['Lausanne'],  to: I['Shenzhen'],         kind: 'main', bow: -1 },   // 2026 MindOn
+          { from: I['Shenzhen'],  to: I['Shanghai'],         kind: 'main', bow:  1 },   // Jul 2026 Sharpa
+          { from: I['Shanghai'],  to: I['conf:Pittsburgh'],  kind: 'side', bow:  1 },   // Oct 2026 IROS
+          { from: I['conf:Pittsburgh'], to: I['Shanghai'],   kind: 'back', bow: -1 }
+        ];
+        var arcs = [];
+        LEGS.forEach(function (leg) {
+          var a = STOPS[leg.from], b = STOPS[leg.to];
+          if (leg.kind === 'mark') { arcs.push({ mark: true, to: leg.to }); return; }
+          var dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 6) { arcs.push({ mark: true, to: leg.to }); return; }
+          var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lift = Math.min(0.17 * d, 58) * leg.bow;
+          var side = leg.kind !== 'main';
           var dAttr = 'M' + a.x + ' ' + a.y + ' Q' + mx + ' ' + (my - lift) + ' ' + b.x + ' ' + b.y;
-          var path = el('path', { 'class': 'arc', d: dAttr });
+          var path = el('path', { 'class': 'arc' + (side ? ' side' : ''), d: dAttr });
           arcsG.appendChild(path);
-          arcsG.appendChild(el('path', { 'class': 'flow', d: dAttr }));   // moving dashes = live connection
+          arcsG.appendChild(el('path', { 'class': 'flow' + (side ? ' side' : ''), d: dAttr }));   // moving dashes = live connection
           var len = path.getTotalLength(); path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
-          arcs.push({ path: path, len: len, to: STOPS.indexOf(b) });
-        }
+          arcs.push({ path: path, len: len, to: leg.to, side: side });
+        });
         // stops
         STOPS.forEach(function (st, idx) {
-          var g = el('g', { 'class': 'stop' + (st.now ? ' now' : '') + (st.conf ? ' conf lit' : ''), 'data-idx': idx });
+          var g = el('g', { 'class': 'stop' + (st.now ? ' now' : '') + (st.conf ? ' conf' : ''), 'data-idx': idx });
           if (st.now) { g.appendChild(el('circle', { 'class': 'pulse', cx: st.x, cy: st.y, r: 6 })); }
           g.appendChild(el('circle', { 'class': 'hit', cx: st.x, cy: st.y, r: 10 }));
           if (st.conf) { g.appendChild(el('rect', { 'class': 'dot', x: st.x - 3.5, y: st.y - 3.5, width: 7, height: 7, transform: 'rotate(45 ' + st.x + ' ' + st.y + ')' })); }
@@ -999,15 +1020,19 @@
           STOPS[0].el.classList.add('lit');
           var t = 350;
           arcs.forEach(function (ar) {
-            var dur = instant ? 0 : Math.max(500, Math.min(1400, ar.len * 2.2));
+            if (ar.mark) {   // an event in the city I was already in: just light the marker
+              setTimeout(function () { STOPS[ar.to].el.classList.add('lit'); }, instant ? 0 : t);
+              t += instant ? 0 : 450; return;
+            }
+            var dur = instant ? 0 : Math.max(450, Math.min(ar.side ? 1100 : 1400, ar.len * (ar.side ? 1.8 : 2.2)));
             setTimeout(function () {
               ar.path.style.transition = instant ? 'none' : 'stroke-dashoffset ' + dur + 'ms ease-in-out';
               ar.path.style.strokeDashoffset = 0;
             }, instant ? 0 : t);
             setTimeout(function () { STOPS[ar.to].el.classList.add('lit'); }, instant ? 0 : t + dur - 80);
-            t += dur + 120;
+            t += dur + (ar.side ? 60 : 120);
           });
-          // the overlapping stop (Shenzhen, no arc of its own) lights with Hong Kong
+          // safety net: everything lit, then switch the arcs to their flowing state
           setTimeout(function () { STOPS.forEach(function (st) { st.el.classList.add('lit'); }); svg.classList.add('flowing'); }, instant ? 0 : t);
         }
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

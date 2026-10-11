@@ -267,16 +267,48 @@ tr.pub:target td {
   fill: #333;
 }
 
-/* conference markers: small teal diamonds */
+/* conference markers: small diamonds, grey until the side trip reaches them, then teal */
 .journey .stop.conf .dot {
-  fill: #2a9d8f;
-  stroke: #fff;
+  fill: #fff;
+  stroke: #9fb0c3;
   stroke-width: 1.5;
 }
 
-.journey .stop.conf text {
+.journey .stop.conf.lit .dot {
   fill: #2a9d8f;
+  stroke: #fff;
+}
+
+.journey .stop.conf text {
   font-style: italic;
+}
+
+.journey .stop.conf.lit text {
+  fill: #2a9d8f;
+}
+
+/* side quests (conference trips): thinner teal arcs with their own flowing dashes */
+.journey .arc.side {
+  stroke: #2a9d8f;
+  stroke-width: 1.5;
+}
+
+.journey .flow.side {
+  stroke: #2a9d8f;
+  stroke-width: 1.7;
+  stroke-dasharray: 3 11;
+}
+
+.journey svg.flowing .flow.side {
+  animation-duration: 0.9s;
+}
+
+@keyframes journey-flow-side {
+  to { stroke-dashoffset: -14; }
+}
+
+.journey svg.flowing .flow.side {
+  animation-name: journey-flow-side;
 }
 
 .journey .stop .pulse {
