@@ -242,7 +242,7 @@ tr.pub:target td {
 }
 
 .journey .stop.lit .dot {
-  fill: #f09228;
+  fill: #1772d0;
   stroke: #fff;
 }
 
@@ -313,7 +313,7 @@ tr.pub:target td {
 
 .journey .stop .pulse {
   fill: none;
-  stroke: #f09228;
+  stroke: #1772d0;
   stroke-width: 1.5;
   opacity: 0;
 }
