@@ -109,6 +109,13 @@ h2 {
   font-size: 32px;
 }
 
+/* "Dr." in front of the name: smaller and bold */
+.name .honorific {
+  font-size: 20px;
+  font-weight: 700;
+  vertical-align: 2px;
+}
+
 /* .one / .two hover-reveal rules and thumbnail sizing are inlined in index.html <head>
    so they always ship together with the markup (GitHub Pages caches this file for 10 min). */
 
