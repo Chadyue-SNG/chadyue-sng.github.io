@@ -171,6 +171,157 @@ tr.pub:target td {
   box-shadow: inset 0 0 0 2px #f09228;
 }
 
+/* ---------- journey map ---------- */
+.journey {
+  position: relative;
+}
+
+.journey svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.journey .sea {
+  fill: #f3f6fa;
+}
+
+.journey .land {
+  fill: #e1e8ef;
+  stroke: #c3cfdb;
+  stroke-width: 0.6;
+}
+
+.journey .arc {
+  fill: none;
+  stroke: #1772d0;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+.journey .stop .dot {
+  fill: #fff;
+  stroke: #9fb0c3;
+  stroke-width: 1.5;
+  transition: fill .4s, stroke .4s, r .4s;
+}
+
+.journey .stop.lit .dot {
+  fill: #f09228;
+  stroke: #fff;
+}
+
+.journey .stop .hit {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.journey .stop text {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 11px;
+  fill: #8a97a6;
+  paint-order: stroke;
+  stroke: #f3f6fa;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: fill .4s;
+}
+
+.journey .stop.lit text {
+  fill: #333;
+}
+
+.journey .stop .pulse {
+  fill: none;
+  stroke: #f09228;
+  stroke-width: 1.5;
+  opacity: 0;
+}
+
+.journey .stop.now.lit .pulse {
+  animation: journey-pulse 2.2s ease-out infinite;
+}
+
+@keyframes journey-pulse {
+  0%   { r: 5;  opacity: 0.9; }
+  100% { r: 16; opacity: 0; }
+}
+
+.journey-tip {
+  position: absolute;
+  z-index: 2;
+  max-width: 260px;
+  padding: 7px 10px;
+  background: #fff;
+  border: 1px solid #d5dde6;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.12);
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+  pointer-events: none;
+}
+
+.journey-tip hr {
+  border: 0;
+  border-top: 1px solid #e6ebf1;
+  margin: 5px 0;
+}
+
+.journey-caption {
+  margin: 6px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ---------- tactile canvas ---------- */
+.tactile canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.tactile-ui {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #777;
+}
+
+.tactile-modes button {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #1772d0;
+  background: none;
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
+  padding: 1px 7px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.tactile-modes button:hover {
+  color: #f09228;
+  border-color: #f09228;
+}
+
+.tactile-modes button.active {
+  color: #fff;
+  background: #1772d0;
+  border-color: #1772d0;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
