@@ -109,35 +109,8 @@ h2 {
   font-size: 32px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-/* reveal the hover media (video / second image) when the whole publication row is hovered */
-tr.pub:hover .two {
-  opacity: 1;
-}
-
-tr.pub img,
-tr.pub video {
-  display: block;
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 4px;
-}
+/* .one / .two hover-reveal rules and thumbnail sizing are inlined in index.html <head>
+   so they always ship together with the markup (GitHub Pages caches this file for 10 min). */
 
 /* keep the 160px thumbnails from overflowing on narrow screens */
 @media (max-width: 480px) {

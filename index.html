@@ -15,7 +15,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011">
+    <style>
+      /* Hover-reveal rules live here (next to the markup they drive) so a cached stylesheet.css
+         can never leave the videos showing by default. Thumbnail is shown at rest; the video
+         in .two fades in while the publication row is hovered. */
+      .one { width: 160px; height: 160px; position: relative; }
+      .two { width: 160px; height: 160px; position: absolute; top: 0; left: 0; opacity: 0;
+             transition: opacity .2s ease-in-out; }
+      tr.pub:hover .two { opacity: 1; }
+      tr.pub img, tr.pub video { display: block; width: 160px; height: 160px; object-fit: cover; border-radius: 4px; }
+    </style>
   </head>
 
   <body>
