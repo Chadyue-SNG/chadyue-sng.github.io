@@ -174,8 +174,6 @@ tr.pub:target td {
 /* ---------- journey map ---------- */
 .journey {
   position: relative;
-  max-width: 520px;
-  margin: 0 auto;
 }
 
 .journey svg {
@@ -255,11 +253,11 @@ tr.pub:target td {
 
 .journey .stop text {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   fill: #8a97a6;
   paint-order: stroke;
   stroke: #f3f6fa;
-  stroke-width: 4px;
+  stroke-width: 3.5px;
   stroke-linejoin: round;
   pointer-events: none;
   transition: fill .4s;
@@ -267,6 +265,18 @@ tr.pub:target td {
 
 .journey .stop.lit text {
   fill: #333;
+}
+
+/* conference markers: small teal diamonds */
+.journey .stop.conf .dot {
+  fill: #2a9d8f;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+.journey .stop.conf text {
+  fill: #2a9d8f;
+  font-style: italic;
 }
 
 .journey .stop .pulse {

@@ -15,7 +15,7 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 
 ## Interactive bits
 
-* **Journey map** (after the intro): inline SVG; land outline generated from a simplified Natural Earth country file (equirectangular, cropped to lon −14…132 / lat −12…61, viewBox 800×400). Stops, roles and label offsets live in the `STOPS` array in the journey-map `<script>`; arcs animate once when scrolled into view (skipped under `prefers-reduced-motion`).
+* **Journey map** (after the intro): inline SVG; land outline generated from a simplified Natural Earth country file (equirectangular, cropped to lon −98…134 / lat −12…60.5, viewBox 800×250). Stops, roles and label offsets live in the `STOPS` array in the journey-map `<script>` (entries with `conf: true` are conference markers, drawn as teal diamonds and left out of the arcs); arcs animate once when scrolled into view (skipped under `prefers-reduced-motion`).
 
 ## Editing
 
