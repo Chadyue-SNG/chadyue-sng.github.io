@@ -26,7 +26,7 @@
       tr.pub:hover td.pubcell { background: #f6f8fb; }
       tr.pub[bgcolor]:hover td.pubcell { background: #fff9b8; }
 
-      /* The list is a fixed-height window (as tall as the ML tab's five papers) that scrolls with the mouse wheel. */
+      /* The list is a fixed-height window (as tall as four papers) that scrolls with the mouse wheel. */
       .publist-wrap { position: relative; }
       #publist { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c9d3df transparent; }
       #publist::-webkit-scrollbar { width: 6px; }
@@ -865,10 +865,11 @@
           list.scrollTop = 0;
           updateFade();
         }
-        // Reference height = the ML & embodied AI tab (five papers); every tab gets the same window.
+        // Reference height = the first four papers of the ML & embodied AI tab; every tab gets the same window.
         function fitHeight() {
           var prev = rows.map(function (r) { return r.style.display; });
-          rows.forEach(function (r) { r.style.display = has(r, 'ml') ? '' : 'none'; });
+          var shown = 0;
+          rows.forEach(function (r) { var keep = has(r, 'ml') && shown < 4; if (keep) { shown++; } r.style.display = keep ? '' : 'none'; });
           list.style.maxHeight = 'none';
           var h = list.scrollHeight;
           rows.forEach(function (r, i) { r.style.display = prev[i]; });
