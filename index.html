@@ -973,7 +973,8 @@
           { city: 'Atlanta',    x: 46.9,  y: 92.2,  role: 'ICRA 2025 \u2014 oral presentation of RASEC', years: '2025', lx: 0, ly: 17, anchor: 'middle', conf: true },
           { city: 'Pittsburgh', x: 62.1,  y: 69.2,  role: 'IROS 2026', years: '2026', lx: 9, ly: -6, anchor: 'start', conf: true },
           { city: 'Bangkok',    x: 684.5, y: 161.2, role: 'ROBIO 2024 \u2014 Best Student Paper Finalist', years: '2024', lx: -9, ly: 4, anchor: 'end', conf: true },
-          { city: 'Lausanne',   x: 360.8, y: 48.2,  role: 'RoboSoft 2025 \u2014 three papers incl. ElastoSight', years: '2025', lx: 0, ly: 0, anchor: 'start', conf: true, nolabel: true }
+          { city: 'Lausanne',   x: 360.8, y: 48.2,  role: 'RoboSoft 2025 \u2014 three papers incl. ElastoSight', years: '2025', lx: 0, ly: 0, anchor: 'start', conf: true, nolabel: true },
+          { city: 'Vienna',     x: 394.4, y: 42.3,  role: 'ICRA 2026 \u2014 kirigami capsule robot for GI biopsy', years: '2026', lx: 9, ly: -4, anchor: 'start', conf: true }
         ];
         var arcsG = document.getElementById('journey-arcs'), stopsG = document.getElementById('journey-stops');
         var tip = document.getElementById('journey-tip'), box = document.getElementById('journey');
@@ -994,6 +995,8 @@
           { from: I['Lausanne'],  to: I['conf:Atlanta'],     kind: 'side', bow:  1 },   // May 2025 ICRA
           { from: I['conf:Atlanta'], to: I['Lausanne'],      kind: 'back', bow: -1 },
           { from: I['Lausanne'],  to: I['Shenzhen'],         kind: 'main', bow: -1 },   // 2026 MindOn
+          { from: I['Shenzhen'],  to: I['conf:Vienna'],      kind: 'side', bow:  1, k: 0.11 },   // Jun 2026 ICRA
+          { from: I['conf:Vienna'], to: I['Shenzhen'],       kind: 'back', bow: -1, k: 0.11 },
           { from: I['Shenzhen'],  to: I['Shanghai'],         kind: 'main', bow:  1 },   // Jul 2026 Sharpa
           { from: I['Shanghai'],  to: I['conf:Pittsburgh'],  kind: 'side', bow:  1 },   // Oct 2026 IROS
           { from: I['conf:Pittsburgh'], to: I['Shanghai'],   kind: 'back', bow: -1 }
@@ -1004,7 +1007,7 @@
           if (leg.kind === 'mark') { arcs.push({ mark: true, to: leg.to }); return; }
           var dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy);
           if (d < 6) { arcs.push({ mark: true, to: leg.to }); return; }
-          var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lift = Math.min(0.17 * d, 58) * leg.bow;
+          var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lift = Math.min((leg.k || 0.17) * d, 58) * leg.bow;
           var side = leg.kind !== 'main';
           var dAttr = 'M' + a.x + ' ' + a.y + ' Q' + mx + ' ' + (my - lift) + ' ' + b.x + ' ' + b.y;
           var path = el('path', { 'class': 'arc' + (side ? ' side' : ''), d: dAttr });
