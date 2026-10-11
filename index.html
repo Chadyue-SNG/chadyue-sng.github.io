@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011n">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011o">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -93,10 +93,10 @@
             </tr>
           </tbody></table>
 
-          <!-- ======================= Journey map ======================= -->
+          <!-- ======================= Journey map + tactile canvas ======================= -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:0 16px 8px 16px;width:100%;vertical-align:middle">
+              <td style="padding:0 8px 8px 16px;width:66%;vertical-align:top">
                 <div class="journey" id="journey">
                   <svg id="journey-svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of the places I have studied and worked">
                     <rect class="sea" x="0" y="0" width="800" height="400"/>
@@ -105,7 +105,20 @@
                     <g id="journey-stops"></g>
                   </svg>
                   <div class="journey-tip" id="journey-tip" hidden></div>
-                  <p class="journey-caption">Nanjing &rarr; Paris &rarr; Singapore &rarr; Hong Kong &rarr; Lausanne &rarr; Shenzhen &rarr; Shanghai &mdash; hover a stop for details.</p>
+                  <p class="journey-caption">Nanjing &rarr; Paris &rarr; Singapore &rarr; Hong Kong &rarr; Lausanne &rarr; Shenzhen &rarr; Shanghai &nbsp;&middot;&nbsp; hover a stop</p>
+                </div>
+              </td>
+              <td style="padding:0 16px 8px 8px;width:34%;vertical-align:top">
+                <div class="tactile" id="tactile-box">
+                  <canvas id="tactile" aria-label="Interactive tactile sensor array: move the pointer over it to press"></canvas>
+                  <div class="tactile-ui">
+                    <span class="tactile-hint">Touch me &mdash; a 16&times;16 tactile array.</span>
+                    <span class="tactile-modes">
+                      <button type="button" data-mode="array" class="active">array</button>
+                      <button type="button" data-mode="gel">gel</button>
+                      <button type="button" data-mode="oct">OCT</button>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -114,7 +127,7 @@
           <!-- ======================= Research ======================= -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:66%;vertical-align:top">
+              <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research Philosophy</h2>
                 <p>
                   I aspire to train physical foundation models that generalize and adapt, much as I have trained myself through wide-ranging scientific exploration.
@@ -142,19 +155,6 @@
                   continuum, capsule and endoluminal robots for biopsy (<a href="#p3">3</a>, <a href="#p6">6</a>, <a href="#p25">25</a>, <a href="#p26">26</a>), magnetic and reconfigurable robots (<a href="#p5">5</a>, <a href="#p19">19</a>),
                   soft actuators &mdash; thermo-pneumatic pouch motors, balloon actuators and bistable magnetoelastic origami (<a href="#p9">9</a>, <a href="#p16">16</a>, <a href="#p24">24</a>, <a href="#p26">26</a>).
                 </p>
-              </td>
-              <td style="padding:16px 16px 16px 0;width:34%;vertical-align:top">
-                <div class="tactile" id="tactile-box">
-                  <canvas id="tactile" aria-label="Interactive tactile sensor array: move the pointer over it to press"></canvas>
-                  <div class="tactile-ui">
-                    <span class="tactile-hint">Touch me &mdash; a 16&times;16 tactile array.</span>
-                    <span class="tactile-modes">
-                      <button type="button" data-mode="array" class="active">array</button>
-                      <button type="button" data-mode="gel">gel</button>
-                      <button type="button" data-mode="oct">OCT</button>
-                    </span>
-                  </div>
-                </div>
               </td>
             </tr>
           </tbody></table>
@@ -967,8 +967,10 @@
           var a = STOPS[i - 1], b = STOPS[i], dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy);
           if (d < 6) { continue; }
           var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lift = Math.min(0.28 * d, 95);
-          var path = el('path', { 'class': 'arc', d: 'M' + a.x + ' ' + a.y + ' Q' + mx + ' ' + (my - lift) + ' ' + b.x + ' ' + b.y });
+          var dAttr = 'M' + a.x + ' ' + a.y + ' Q' + mx + ' ' + (my - lift) + ' ' + b.x + ' ' + b.y;
+          var path = el('path', { 'class': 'arc', d: dAttr });
           arcsG.appendChild(path);
+          arcsG.appendChild(el('path', { 'class': 'flow', d: dAttr }));   // moving dashes = live connection
           var len = path.getTotalLength(); path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
           arcs.push({ path: path, len: len, to: i });
         }
@@ -1013,7 +1015,7 @@
             t += dur + 120;
           });
           // the overlapping stop (Shenzhen, no arc of its own) lights with Hong Kong
-          setTimeout(function () { STOPS.forEach(function (st) { st.el.classList.add('lit'); }); }, instant ? 0 : t);
+          setTimeout(function () { STOPS.forEach(function (st) { st.el.classList.add('lit'); }); svg.classList.add('flowing'); }, instant ? 0 : t);
         }
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!('IntersectionObserver' in window)) { play(true); }

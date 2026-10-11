@@ -197,15 +197,47 @@ tr.pub:target td {
 .journey .arc {
   fill: none;
   stroke: #1772d0;
-  stroke-width: 1.6;
+  stroke-width: 2;
   stroke-linecap: round;
-  opacity: 0.85;
+  opacity: 0.8;
+  transition: opacity .8s;
+}
+
+/* once the journey has been drawn, the solid arcs fade back and dashes keep travelling along them */
+.journey svg.flowing .arc {
+  opacity: 0.22;
+}
+
+.journey .flow {
+  fill: none;
+  stroke: #1772d0;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 5 14;
+  opacity: 0;
+  transition: opacity .8s;
+}
+
+.journey svg.flowing .flow {
+  opacity: 0.95;
+  animation: journey-flow 1.1s linear infinite;
+}
+
+@keyframes journey-flow {
+  to { stroke-dashoffset: -19; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey svg.flowing .flow { animation: none; opacity: 0; }
+  .journey svg.flowing .arc { opacity: 0.8; }
+  .journey .stop.now.lit .pulse { animation: none; }
 }
 
 .journey .stop .dot {
   fill: #fff;
   stroke: #9fb0c3;
-  stroke-width: 1.5;
+  stroke-width: 2;
+  r: 5;
   transition: fill .4s, stroke .4s, r .4s;
 }
 
@@ -221,11 +253,11 @@ tr.pub:target td {
 
 .journey .stop text {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   fill: #8a97a6;
   paint-order: stroke;
   stroke: #f3f6fa;
-  stroke-width: 3px;
+  stroke-width: 4px;
   stroke-linejoin: round;
   pointer-events: none;
   transition: fill .4s;
@@ -247,8 +279,8 @@ tr.pub:target td {
 }
 
 @keyframes journey-pulse {
-  0%   { r: 5;  opacity: 0.9; }
-  100% { r: 16; opacity: 0; }
+  0%   { r: 6;  opacity: 0.9; }
+  100% { r: 20; opacity: 0; }
 }
 
 .journey-tip {
