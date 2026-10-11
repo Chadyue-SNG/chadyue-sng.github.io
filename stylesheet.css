@@ -109,9 +109,48 @@ h2 {
   font-size: 32px;
 }
 
-/* publication rows: text only; highlighted rows get their background from bgcolor */
-tr.pub td {
-  border-radius: 6px;
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+/* reveal the hover media (video / second image) when the whole publication row is hovered */
+tr.pub:hover .two {
+  opacity: 1;
+}
+
+tr.pub img,
+tr.pub video {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* keep the 160px thumbnails from overflowing on narrow screens */
+@media (max-width: 480px) {
+  tr.pub td:first-child {
+    width: 30% !important;
+  }
+
+  tr.pub img,
+  .one,
+  .two {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 .fade {

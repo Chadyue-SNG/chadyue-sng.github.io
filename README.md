@@ -7,16 +7,19 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | the whole page: bio, research statement, publications, miscellanea |
-| `stylesheet.css` | template styles |
+| `index.html` | the whole page: bio, research statement, news, publications, miscellanea |
+| `stylesheet.css` | template styles + hover reveal for publication rows (`tr.pub:hover .two`) |
 | `images/wenchao.jpg` | profile photo |
-| `images/<paper>.jpg` / `.png` / `.mp4` | publication thumbnails and hover videos — currently **not used** (the list is text-only); kept so the thumbnail layout can be restored, see git history (`8fc40da`) for the markup |
+| `images/<paper>.jpg` / `.png` | 320×320 publication thumbnails (`.png` files are placeholder venue cards — replace with real figures when ready) |
+| `images/<paper>.mp4` | short hover videos shown when the mouse is over a publication row |
 | `images/favicon/` | favicon set |
 | `data/` | put `Wenchao_Yue_CV.pdf` here and un-comment the CV link in `index.html` |
 
 ## Editing
 
-* Add a publication: copy any `<tr class="pub"> … </tr>` block in `index.html`, change the title, authors, venue, links and one-line description. Add `bgcolor="#ffffd0"` to highlight it.
+* Add a publication: copy any `<tr class="pub"> … </tr>` block in `index.html`, change the thumbnail, title, authors, venue, links and one-line description. Add `bgcolor="#ffffd0"` to highlight it.
+* Hover video: wrap the thumbnail in `<div class="one"><div class="two"><video …></div><img …></div>` (see the pouch-motor / balloon-sensor rows).
+* Thumbnails are 320×320 (2× of the 160 px slot). Pad non-square figures with white rather than cropping them.
 
 ## Preview locally
 
