@@ -9,7 +9,7 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 | --- | --- |
 | `index.html` | the whole page: bio, research statement, news, publications, miscellanea |
 | `stylesheet.css` | template styles (fonts, colours). The hover-reveal rules for publication rows (`.one` / `.two`, `tr.pub:hover .two`) are inlined in the `<head>` of `index.html`; bump the `?v=` on the stylesheet link whenever you edit this file so GitHub Pages' 10-minute cache is bypassed |
-| `images/wenchao.jpg` | profile photo |
+| `images/wenchao.jpg`, `images/wenchao_back.jpg` | profile photo (front) and the photo revealed by the hover flip (back) |
 | `images/<paper>.jpg` / `.png` | 320×320 publication thumbnails (`.png` files are placeholder venue cards — replace with real figures when ready) |
 | `images/<paper>.mp4` | short hover videos shown when the mouse is over a publication row |
 | `images/favicon/` | favicon set |
