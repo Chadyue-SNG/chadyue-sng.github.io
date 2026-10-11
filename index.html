@@ -17,14 +17,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011i">
     <style>
-      /* Hover-reveal rules live here (next to the markup they drive) so a cached stylesheet.css
-         can never leave the videos showing by default. Thumbnail is shown at rest; the video
-         in .two fades in while the publication row is hovered. */
-      .one { width: 160px; height: 160px; position: relative; }
-      .two { width: 160px; height: 160px; position: absolute; top: 0; left: 0; opacity: 0;
-             transition: opacity .2s ease-in-out; }
-      tr.pub:hover .two { opacity: 1; }
-      tr.pub img, tr.pub video { display: block; width: 160px; height: 160px; object-fit: cover; border-radius: 4px; }
+      /* Publication rows: text only (thumbnails may come back later; see README).
+         Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
+      tr.pub td.pubcell { width: 100%; padding: 10px 16px 10px 52px; vertical-align: top; position: relative; border-radius: 6px; }
+      tr.pub .pubnum { position: absolute; left: 16px; top: 11px; margin: 0; }
+      tr.pub .papertitle { line-height: 1.35; }
+      tr.pub p.desc { margin: 6px 0 0 0; color: #555; }
+      tr.pub:hover td.pubcell { background: #f6f8fb; }
+      tr.pub[bgcolor]:hover td.pubcell { background: #fff9b8; }
 
       /* Profile photo: smaller circle, not clickable, flips to a second photo on hover. */
       .avatar { width: 86%; aspect-ratio: 1 / 1; margin: 0 auto; perspective: 900px; }
@@ -127,9 +127,9 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2 id="publications">Publications</h2>
+                <h2 id="publications">Selected Publications</h2>
                 <p>
-                  Peer-reviewed journal, conference and workshop papers, numbered chronologically; papers I led are <span class="highlight">highlighted</span>,
+                  Peer-reviewed journal, conference and workshop papers, numbered chronologically. Papers I led are <span class="highlight">highlighted</span>,
                   <sup>*</sup> denotes equal contribution. Pick a topic to filter the list; a paper can belong to several topics.
                   Full list on <a href="https://scholar.google.com/citations?user=KheeXAMAAAAJ&hl=en">Google Scholar</a>.
                 </p>
@@ -144,13 +144,10 @@
             </tr>
           </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 4px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 <tr class="pub" id="p27" data-tags="ml robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/trachealus.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">27</span>
     <a href="https://doi.org/10.1088/1742-6596/3291/1/012035">
       <span class="papertitle">Learning-based Hierarchical Tracheal Anatomy Understanding from Sparse Surgical Demonstration Annotations for Ultrasound Robots</span>
@@ -164,22 +161,17 @@
     <a href="https://scholar.google.com/scholar?q=Hongbin+Liu">Hongbin Liu</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Journal of Physics: Conference Series</em>, 3291, 012035, 2026
-    <br>
+    <em>Journal of Physics: Conference Series</em>, 3291, 012035, 2026 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1088/1742-6596/3291/1/012035">paper</a> /
     <a href="https://arxiv.org/abs/2607.22789">arXiv</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A detect-then-segment pipeline (YOLO + SAM2) that learns the hierarchy of thyroid cartilage, cricoid cartilage and tracheal rings in ultrasound from sparse surgeon annotations, towards ultrasound-guided robotic tracheostomy.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p26" data-tags="soft robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/pouchmatrix.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">26</span>
     <a href="https://doi.org/10.1109/TMRB.2026.3699220">
       <span class="papertitle">Bilateral Soft Pouch Matrix Actuation for Multimodal Intraluminal Locomotion of Liquid Sampling Robotics</span>
@@ -197,21 +189,16 @@
     <a href="https://scholar.google.com/scholar?q=Xiuli+Zuo">Xiuli Zuo</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Transactions on Medical Robotics and Bionics (T-MRB)</em>, 8(3), 2026
-    <br>
+    <em>IEEE Transactions on Medical Robotics and Bionics (T-MRB)</em>, 8(3), 2026 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/TMRB.2026.3699220">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A bilateral matrix of soft pouch actuators gives a liquid-sampling robot several locomotion modes inside the lumen.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p25" data-tags="robotics soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/kirigamicapsule.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">25</span>
     <a href="https://doi.org/10.1109/ICRA57385.2026.11696143">
       <span class="papertitle">Bioinspired Kirigami Capsule Robot for Minimally Invasive Gastrointestinal Biopsy</span>
@@ -224,22 +211,17 @@
     <a href="https://scholar.google.com/scholar?q=Raymond+Shing-Yan+Tang">Raymond Shing-Yan Tang</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ICRA</em>, 2026
-    <br>
+    <em>ICRA</em>, 2026 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/ICRA57385.2026.11696143">paper</a> /
     <a href="https://arxiv.org/abs/2602.06207">arXiv</a>
-    <p></p>
-    <p>
+    <p class="desc">
       An ingestible capsule whose cam-driven kirigami polyimide flaps deploy and rotationally scrape tissue for depth-controlled GI biopsy, validated on ex vivo porcine tissue with histology.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p24" data-tags="soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/inear.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">24</span>
     <a href="https://doi.org/10.1109/IROS60139.2025.11245950">
       <span class="papertitle">Body-Temperature-Responsive Balloon Actuator for Adaptive In-Ear Microneedle Electrode Deployment</span>
@@ -251,21 +233,16 @@
     <a href="https://scholar.google.com/scholar?q=Chengxi+Bai">Chengxi Bai</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IROS</em>, 2025
-    <br>
+    <em>IROS</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/IROS60139.2025.11245950">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A balloon actuator triggered by body temperature that adaptively presses microneedle electrodes against the ear canal.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p23" data-tags="ml tactile robotics" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/tomography.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">23</span>
     <a href="https://doi.org/10.34133/cbsystems.0348">
       <span class="papertitle">Bimodal Tactile Tomography with Bayesian Sequential Palpation for Intracavitary Microstructure Profiling and Segmentation</span>
@@ -278,21 +255,16 @@
     <a href="https://www.bme.cuhk.edu.hk/yuan/index.html">Wu Yuan</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Cyborg and Bionic Systems</em>, 6:0348, 2025 &nbsp;(also presented at the ICRA 2025 RAMI workshop)
-    <br>
+    <em>Cyborg and Bionic Systems</em>, 6:0348, 2025 &nbsp;(also presented at the ICRA 2025 RAMI workshop) &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.34133/cbsystems.0348">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Robotic bimodal palpation with ElastoSight: circumferential and sliding OCT B-scans plus Bayesian optimization localize tumor phantoms within 30 palpations (F1 &gt; 0.976, centroid error &lt; 0.032&nbsp;mm) and segment hard inclusions from soft tissue with 0.983 precision.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p22" data-tags="tactile robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/vbts.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">22</span>
     <a href="https://doi.org/10.1016/j.procs.2025.10.114">
       <span class="papertitle">Conformable Vision-Based Tactile Sensor with Enhanced Soft Elastomer Design for Palpating Irregular Anatomical Surfaces</span>
@@ -305,21 +277,16 @@
     <a href="https://scholar.google.com/scholar?q=Tangyou+Liu">Tangyou Liu</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ICBIR</em> (Procedia Computer Science), 2025
-    <br>
+    <em>ICBIR</em> (Procedia Computer Science), 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1016/j.procs.2025.10.114">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A vision-based tactile sensor with a softer, conformable elastomer that palpates uneven, skin-covered cartilage and recovers both shape and stiffness of the throat region.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p21" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/teleop.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">21</span>
     <a href="https://doi.org/10.1016/j.procs.2025.10.161">
       <span class="papertitle">Delay-aware Teleoperative Training System for Transcontinental Robot-assisted Minimally Invasive Trajectory Following</span>
@@ -331,21 +298,16 @@
     <a href="https://scholar.google.com/scholar?q=Jamie+Kyujin+Paik">Jamie Kyujin Paik</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ICBIR</em> (Procedia Computer Science), 2025
-    <br>
+    <em>ICBIR</em> (Procedia Computer Science), 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1016/j.procs.2025.10.161">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A teleoperation training system that accounts for network delay so that operators can follow minimally invasive trajectories across continents.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p20" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/scaling.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">20</span>
     <a href="https://doi.org/10.1016/j.procs.2025.10.162">
       <span class="papertitle">Design and Characteristics of Motion Scaling Manipulator for Enhanced Microsurgical Applications</span>
@@ -356,21 +318,16 @@
     <a href="https://scholar.google.com/scholar?q=Yuxiang+Nie">Yuxiang Nie</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ICBIR</em> (Procedia Computer Science), 2025
-    <br>
+    <em>ICBIR</em> (Procedia Computer Science), 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1016/j.procs.2025.10.162">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Design and characterization of a manipulator that scales down the surgeon's hand motion for microsurgical tasks.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p19" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/magnetoparallel.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">19</span>
     <a href="https://doi.org/10.1002/aisy.202500529">
       <span class="papertitle">Centimeter-Scale Magneto-Reconfigurable Parallel Robots: A Grassmann Line Geometry Synthesis Framework for Multitask Adaptation Using Magneto-Connected Part Library</span>
@@ -383,26 +340,16 @@
     <a href="https://scholar.google.com/scholar?q=Xiao+Xiao">Xiao Xiao</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Advanced Intelligent Systems</em>, 2025
-    <br>
+    <em>Advanced Intelligent Systems</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1002/aisy.202500529">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Grassmann line geometry is used to synthesize centimeter-scale parallel robots from a library of magnetically connected parts, so one kit can be reconfigured for many tasks.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p18" data-tags="tactile soft" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <div class="one">
-      <div class="two"><video width="100%" height="100%" muted autoplay loop playsinline>
-        <source src="images/balloonsensor.mp4" type="video/mp4">
-      </video></div>
-      <img src="images/balloonsensor.jpg" width="160" height="160" alt="">
-    </div>
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">18</span>
     <a href="https://doi.org/10.1002/adrr.202400028">
       <span class="papertitle">Low-Strain Flexible Ink-Based Sensors Enable Hyperelastic Inflation Perception via Geometric Patterning for Balloon-Type Robots</span>
@@ -416,21 +363,16 @@
     <a href="https://scholar.google.com/scholar?q=Guohua+Hu">Guohua Hu</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Advanced Robotics Research</em>, 2025
-    <br>
+    <em>Advanced Robotics Research</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1002/adrr.202400028">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Geometrically patterned, low-strain conductive-ink sensors transfer-printed onto soft balloon actuators give balloon-type robots awareness of their own inflation and of touch, which makes human&ndash;balloon interaction safer and inflation controllable.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p17" data-tags="tactile robotics" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/elsr.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">17</span>
     <a href="https://doi.org/10.36227/techrxiv.174495651.17295903/v1">
       <span class="papertitle">Miniature OCT-based Tactile Sensor for Concurrent Multimodal Contact Profiling in Robotic Intraluminal Palpation</span>
@@ -441,21 +383,16 @@
     <a href="https://www.bme.cuhk.edu.hk/yuan/index.html">Wu Yuan</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ICRA 2025 Workshop on the Evolving Landscape of Surgical Robotics (ELSR)</em>, 2025 &nbsp;(<span class="highlight">Best Paper Award</span> &amp; Best Poster Runner-Up)
-    <br>
+    <em>ICRA 2025 Workshop on the Evolving Landscape of Surgical Robotics (ELSR)</em>, 2025 &nbsp;(<span class="highlight">Best Paper Award</span> &amp; Best Poster Runner-Up) &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.36227/techrxiv.174495651.17295903/v1">preprint</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Workshop version of ElastoSight: a single OCT probe with a snap-on elastomer film profiles contact force and 3D contact geometry at the same time during robotic intraluminal palpation.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p16" data-tags="soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/bistable.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">16</span>
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020860">
       <span class="papertitle">Redesign Energy Landscapes of A Bistable Magnetoelastic Origami Towards Tissue Puncture</span>
@@ -469,21 +406,16 @@
     <a href="https://scholar.google.com/scholar?q=Chenjie+Xu">Chenjie Xu</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>RoboSoft</em>, 2025
-    <br>
+    <em>RoboSoft</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020860">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Reshaping the energy landscape of a bistable magnetoelastic origami so that a magnetic field triggers a snap-through fast and strong enough to puncture tissue.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p15" data-tags="tactile soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/kirigamistrain.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">15</span>
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020837">
       <span class="papertitle">Kirigami-inspired Flexible Strain Sensor for Dynamic Inflation Surface Applications</span>
@@ -494,21 +426,16 @@
     <a href="https://scholar.google.com/scholar?q=Ruizhou+Zhao">Ruizhou Zhao</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>RoboSoft</em>, 2025
-    <br>
+    <em>RoboSoft</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020837">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A kirigami-cut flexible strain sensor that keeps working on surfaces that inflate and deflate dynamically.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p14" data-tags="tactile robotics" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/elastosight.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">14</span>
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020812">
       <span class="papertitle">ElastoSight: Miniature Tactile Sensors for Multimodal Force and Geometry Estimation in Robotic Intraluminal Palpation</span>
@@ -521,22 +448,17 @@
     <a href="https://www.bme.cuhk.edu.hk/yuan/index.html">Wu Yuan</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>RoboSoft</em>, 2025
-    <br>
+    <em>RoboSoft</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020812">paper</a> /
     <a href="https://doi.org/10.36227/techrxiv.174495651.17295903/v1">preprint</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A miniature tactile sensor made by snapping a thin PDMS film onto an endoscopic OCT probe: Hertz-contact calibration gives contact force, and the imaged film gives 3D contact geometry with shape errors below 0.15&nbsp;mm.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p13" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/drill.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">13</span>
     <a href="https://doi.org/10.1109/TIM.2025.3566848">
       <span class="papertitle">Endotracheal Untethered Retractable Drill Mechanism Toward Robot-Assisted Endoluminal Inside-Out Dilatational Tracheostomy</span>
@@ -550,21 +472,16 @@
     <a href="https://scholar.google.com/scholar?q=Zifeng+Huang">Zifeng Huang</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Transactions on Instrumentation and Measurement</em>, 2025
-    <br>
+    <em>IEEE Transactions on Instrumentation and Measurement</em>, 2025 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/TIM.2025.3566848">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       An untethered, retractable drill that works from inside the trachea outwards, toward robot-assisted inside-out dilatational tracheostomy.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p12" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/artracheostomy.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">12</span>
     <a href="https://doi.org/10.1109/ROBIO64047.2024.10907554">
       <span class="papertitle">Multimodal Augmented Reality Assisted Incision Guidance for Preoperative Tracheostomy Planning</span>
@@ -576,22 +493,17 @@
     <a href="https://scholar.google.com/scholar?q=Huxin+Gao">Huxin Gao</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>ROBIO</em>, 2024 &nbsp;(<span class="highlight">Best Student Paper Finalist</span>)
-    <br>
+    <em>ROBIO</em>, 2024 &nbsp;(<span class="highlight">Best Student Paper Finalist</span>) &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/ROBIO64047.2024.10907554">paper</a> /
     <a href="https://doi.org/10.36227/techrxiv.172978242.21046694/v1">preprint</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Multimodal augmented reality that overlays the recommended incision site on the patient's neck for preoperative tracheostomy planning.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p11" data-tags="tactile robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/haptic.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">11</span>
     <a href="https://doi.org/10.1016/B978-0-443-13271-1.00021-2">
       <span class="papertitle">Haptic Feedback Technology in Robot-Assisted Surgery</span>
@@ -601,21 +513,16 @@
     <strong>Wenchao Yue</strong><sup>*</sup>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Handbook of Robotic Surgery</em> (Elsevier), pp. 57&ndash;68, 2024
-    <br>
+    <em>Handbook of Robotic Surgery</em> (Elsevier), pp. 57&ndash;68, 2024 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1016/B978-0-443-13271-1.00021-2">chapter</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A book chapter surveying haptic feedback technologies for robot-assisted surgery.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p10" data-tags="ml robotics tactile" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/rasec.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">10</span>
     <a href="https://doi.org/10.1109/TASE.2024.3423391">
       <span class="papertitle">RASEC: Rescaling Acquisition Strategy with Energy Constraints under Fusion Kernel for Active Incision Recommendation in Tracheotomy</span>
@@ -629,27 +536,17 @@
     <a href="https://scholar.google.com/scholar?q=Chwee+Ming+Lim">Chwee Ming Lim</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Transactions on Automation Science and Engineering (T-ASE)</em>, 2024 &nbsp;(oral presentation at <em>ICRA 2025</em>)
-    <br>
+    <em>IEEE Transactions on Automation Science and Engineering (T-ASE)</em>, 2024 &nbsp;(oral presentation at <em>ICRA 2025</em>) &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/TASE.2024.3423391">paper</a> /
     <a href="https://arxiv.org/abs/2111.03235">arXiv</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Active robotic palpation for tracheotomy: Bayesian optimization with a fusion (SE&ndash;OU) kernel and an energy-constrained, rescaled acquisition function localizes the tracheal rings efficiently and recommends the incision site under visual&ndash;tactile guidance.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p9" data-tags="soft" bgcolor="#ffffd0">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <div class="one">
-      <div class="two"><video width="100%" height="100%" muted autoplay loop playsinline>
-        <source src="images/pouchmotor.mp4" type="video/mp4">
-      </video></div>
-      <img src="images/pouchmotor.jpg" width="160" height="160" alt="">
-    </div>
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">9</span>
     <a href="https://doi.org/10.1002/adem.202301408">
       <span class="papertitle">Dual-Stroke Soft Peltier Pouch Motor Based on Pipeless Thermo-Pneumatic Actuation</span>
@@ -660,21 +557,16 @@
     <a href="https://scholar.google.com/scholar?q=Jiewen+Lai">Jiewen Lai</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Advanced Engineering Materials</em>, 2023 &nbsp;(<span class="highlight">front cover</span>)
-    <br>
+    <em>Advanced Engineering Materials</em>, 2023 &nbsp;(<span class="highlight">front cover</span>) &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1002/adem.202301408">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A pipeless soft pouch motor: a Peltier element drives the liquid-to-gas phase transition in both directions, giving a dual-stroke actuator that hovers in liquid and rolls untethered on land.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p8" data-tags="ml robotics soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/sim2real.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">8</span>
     <a href="https://doi.org/10.1109/TII.2023.3291699">
       <span class="papertitle">Sim-to-Real Transfer of Soft Robotic Navigation Strategies That Learns From the Virtual Eye-in-Hand Vision</span>
@@ -687,21 +579,16 @@
     <a href="https://scholar.google.com/scholar?q=Jason+Y.+K.+Chan">Jason Y. K. Chan</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Transactions on Industrial Informatics</em>, 2023
-    <br>
+    <em>IEEE Transactions on Industrial Informatics</em>, 2023 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/TII.2023.3291699">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Navigation policies for a soft robot are learned from virtual eye-in-hand vision in simulation and transferred to the real robot.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p7" data-tags="ml robotics tactile">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/palpationrl.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">7</span>
     <a href="https://doi.org/10.1109/ROBIO55434.2022.10012022">
       <span class="papertitle">Autonomous Tumor Palpation and Resection Path Planning Using Tactile Array Sensor and Deep Reinforcement Learning for Surgical Robot</span>
@@ -715,21 +602,16 @@
     <a href="https://scholar.google.com/scholar?q=Yanfei+Cao">Yanfei Cao</a>,
     <strong>Wenchao Yue</strong>
     <br>
-    <em>ROBIO</em>, 2022
-    <br>
+    <em>ROBIO</em>, 2022 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/ROBIO55434.2022.10012022">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A surgical robot palpates tissue with a tactile array and uses deep reinforcement learning to find the tumor and plan the resection path.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p6" data-tags="robotics tactile">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/laminated.png" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">6</span>
     <a href="https://doi.org/10.1109/JSEN.2022.3223044">
       <span class="papertitle">A Laminated Continuum Robot With Gripping Force-Sensing Forceps for Robot-Assisted Minimally Invasive Surgeries</span>
@@ -742,21 +624,16 @@
     <a href="https://scholar.google.com/scholar?q=Chengjun+Zhu">Chengjun Zhu</a>,
     <strong>Wenchao Yue</strong>
     <br>
-    <em>IEEE Sensors Journal</em>, 2022
-    <br>
+    <em>IEEE Sensors Journal</em>, 2022 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/JSEN.2022.3223044">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A laminated continuum robot whose forceps sense gripping force, for robot-assisted minimally invasive surgery.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p5" data-tags="robotics soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/origamispring.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">5</span>
     <a href="https://doi.org/10.1109/LRA.2022.3194318">
       <span class="papertitle">Versatile Motion Generation of Magnetic Origami Spring Robots in the Uniform Magnetic Field</span>
@@ -776,21 +653,16 @@
     <a href="https://scholar.google.com/scholar?q=Max+Q.-H.+Meng">Max Q.-H. Meng</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2022, with <em>IROS 2022</em>
-    <br>
+    <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2022, with <em>IROS 2022</em> &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/LRA.2022.3194318">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Magnetic origami spring robots that crawl, roll and reconfigure under a uniform magnetic field.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p4" data-tags="tactile soft">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/origamisensor.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">4</span>
     <a href="https://doi.org/10.3390/s22145370">
       <span class="papertitle">Origami-Inspired Structure with Pneumatic-Induced Variable Stiffness for Multi-DOF Force-Sensing</span>
@@ -805,21 +677,16 @@
     <a href="https://scholar.google.com/scholar?q=Chenjie+Xu">Chenjie Xu</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Sensors</em>, 22(14):5370, 2022
-    <br>
+    <em>Sensors</em>, 22(14):5370, 2022 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.3390/s22145370">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       An origami-inspired structure whose stiffness is tuned pneumatically, turning one compliant module into a multi-DOF force sensor.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p3" data-tags="robotics">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/tubular.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">3</span>
     <a href="https://doi.org/10.3390/act11050124">
       <span class="papertitle">Deployable Tubular Mechanisms Integrated with Magnetic Anchoring and Guidance System</span>
@@ -830,21 +697,16 @@
     <a href="https://scholar.google.com/scholar?q=Joei+Simin+Wong">Joei Simin Wong</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>Actuators</em>, 11(5):124, 2022
-    <br>
+    <em>Actuators</em>, 11(5):124, 2022 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.3390/act11050124">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       Tubular mechanisms that deploy inside the body and are anchored and guided magnetically, for single-site minimally invasive access.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p2" data-tags="tactile">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/dualmode.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">2</span>
     <a href="https://doi.org/10.1088/1361-665X/ac112b">
       <span class="papertitle">A Dual-Mode Tactile Hardness Sensor for Intraoperative Tumor Detection and Tactile Imaging in Robot-Assisted Minimally Invasive Surgery</span>
@@ -856,21 +718,16 @@
     <a href="https://scholar.google.com/scholar?q=Chengjun+Zhu">Chengjun Zhu</a>,
     <a href="https://scholar.google.com/scholar?q=Feng+Ju">Feng Ju</a>
     <br>
-    <em>Smart Materials and Structures</em>, 2021
-    <br>
+    <em>Smart Materials and Structures</em>, 2021 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1088/1361-665X/ac112b">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A dual-mode tactile hardness sensor for detecting tumors and producing tactile images during robot-assisted minimally invasive surgery.
     </p>
   </td>
 </tr>
 
 <tr class="pub" id="p1" data-tags="tactile">
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src="images/piezo.jpg" width="160" height="160" alt="">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
+  <td class="pubcell">
     <span class="pubnum">1</span>
     <a href="https://doi.org/10.1109/JSEN.2021.3086114">
       <span class="papertitle">Dynamic Piezoelectric Tactile Sensor for Tissue Hardness Measurement Using Symmetrical Flexure Hinges and Anisotropic Vibration Modes</span>
@@ -884,11 +741,9 @@
     <a href="https://scholar.google.com/scholar?q=Zion+Tsz+Ho+Tse">Zion Tsz Ho Tse</a>,
     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-ren-hongliang">Hongliang Ren</a>
     <br>
-    <em>IEEE Sensors Journal</em>, 21(16):17712&ndash;17722, 2021
-    <br>
+    <em>IEEE Sensors Journal</em>, 21(16):17712&ndash;17722, 2021 &nbsp;&middot;&nbsp;
     <a href="https://doi.org/10.1109/JSEN.2021.3086114">paper</a>
-    <p></p>
-    <p>
+    <p class="desc">
       A piezoelectric tactile sensor that measures tissue hardness dynamically, using symmetrical flexure hinges and anisotropic vibration modes to separate contact directions.
     </p>
   </td>

@@ -10,17 +10,14 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 | `index.html` | the whole page: bio, research statement, news, publications, miscellanea |
 | `stylesheet.css` | template styles (fonts, colours). The hover-reveal rules for publication rows (`.one` / `.two`, `tr.pub:hover .two`) are inlined in the `<head>` of `index.html`; bump the `?v=` on the stylesheet link whenever you edit this file so GitHub Pages' 10-minute cache is bypassed |
 | `images/wenchao.jpg`, `images/wenchao_back.jpg` | profile photo (front) and the photo revealed by the hover flip (back) |
-| `images/<paper>.jpg` / `.png` | 320×320 publication thumbnails (`.png` files are placeholder venue cards — replace with real figures when ready) |
-| `images/<paper>.mp4` | short hover videos shown when the mouse is over a publication row |
+| `images/<paper>.jpg` / `.png` / `.mp4` | publication thumbnails and hover videos — currently **not used** (the list is text-only); kept so the thumbnail layout can be restored, see git history (`bae886d`) for the markup |
 | `images/favicon/` | favicon set |
 
 ## Editing
 
-* Add a publication: copy any `<tr class="pub"> … </tr>` block in `index.html`, change the thumbnail, title, authors, venue, links and one-line description. Add `bgcolor="#ffffd0"` to highlight it.
+* Add a publication: copy any `<tr class="pub"> … </tr>` block in `index.html`, change the title, authors, venue, links and one-line description. Add `bgcolor="#ffffd0"` to highlight it.
 * Numbering is chronological (oldest = 1), so a new paper gets the next number: set `id="p<N>"`, put `<span class="pubnum"><N></span>` before the title, and place the row at the top of the list.
 * Topics: set `data-tags` on the row to any of `ml`, `tactile`, `robotics`, `soft` (space-separated). The tab buttons in `#pubtabs` filter on these and show counts automatically. To reference the paper from the Research overview, link to `#p<N>`.
-* Hover video: wrap the thumbnail in `<div class="one"><div class="two"><video …></div><img …></div>` (see the pouch-motor / balloon-sensor rows).
-* Thumbnails are 320×320 (2× of the 160 px slot). Pad non-square figures with white rather than cropping them.
 
 ## Preview locally
 

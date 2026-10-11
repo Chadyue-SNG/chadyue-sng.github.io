@@ -115,23 +115,6 @@ h2 {
   font-weight: 700;
 }
 
-/* .one / .two hover-reveal rules and thumbnail sizing are inlined in index.html <head>
-   so they always ship together with the markup (GitHub Pages caches this file for 10 min). */
-
-/* keep the 160px thumbnails from overflowing on narrow screens */
-@media (max-width: 480px) {
-  tr.pub td:first-child {
-    width: 30% !important;
-  }
-
-  tr.pub img,
-  .one,
-  .two {
-    width: 100% !important;
-    height: auto !important;
-  }
-}
-
 /* research overview: one line per area, Zhao-Lab style */
 p.areas {
   margin: 0 0 6px 0;
