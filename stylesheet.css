@@ -178,10 +178,10 @@ tr.pub:target td {
 
 .hand-wrap {
   position: absolute;
-  right: -10px;
-  bottom: -6px;
-  width: 72px;
-  height: 72px;
+  right: -14px;
+  bottom: -8px;
+  width: 86px;
+  height: 86px;
   z-index: 2;
   transform: rotate(-14deg);
   pointer-events: none;
@@ -201,8 +201,8 @@ tr.pub:target td {
 .robohand .body,
 .robohand .palm {
   fill: url(#rh-g);
-  stroke: #9aa3ad;
-  stroke-width: 0.55;
+  stroke: #8a939e;
+  stroke-width: 0.6;
   stroke-linejoin: round;
 }
 
@@ -233,7 +233,7 @@ tr.pub:target td {
 }
 
 .robohand .pad {
-  fill: #c3cbd3;
+  fill: #b6bec7;
   opacity: 0.9;
 }
 
