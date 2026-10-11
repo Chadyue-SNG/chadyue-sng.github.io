@@ -109,11 +109,6 @@ h2 {
   font-size: 32px;
 }
 
-/* the two intro paragraphs next to the photo are justified */
-p.bio {
-  text-align: justify;
-}
-
 /* "Dr." in front of the name: smaller and bold */
 .name .honorific {
   font-size: 34px;
