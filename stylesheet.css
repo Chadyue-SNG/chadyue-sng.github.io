@@ -112,7 +112,7 @@ h2 {
 /* "Dr." in front of the name: smaller and bold */
 .name .honorific {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* research overview: one line per area, Zhao-Lab style */
