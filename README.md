@@ -13,7 +13,6 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 | `images/<paper>.jpg` / `.png` | 320×320 publication thumbnails (`.png` files are placeholder venue cards — replace with real figures when ready) |
 | `images/<paper>.mp4` | short hover videos shown when the mouse is over a publication row |
 | `images/favicon/` | favicon set |
-| `data/Wenchao_Yue_CV.pdf` | CV linked from the header |
 
 ## Editing
 
