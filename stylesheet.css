@@ -190,100 +190,73 @@ tr.pub:target td {
 }
 
 .robohand {
-  width: 68px;
-  height: 68px;
+  width: 70px;
+  height: 70px;
   flex: 0 0 auto;
   overflow: visible;
   transform-origin: 50% 96%;
   cursor: pointer;
 }
 
-/* grey-white shaded body (after the Sharpa Wave hand): gradient-shaded phalanges, graphite hinges */
+/* grey-white hand: one soft gradient over palm and tapered fingers, hairline seams, light edge highlights */
+.robohand .body,
 .robohand .palm {
-  fill: url(#rh-pg);
+  fill: url(#rh-g);
+  stroke: #9aa3ad;
+  stroke-width: 0.55;
+  stroke-linejoin: round;
+}
+
+.robohand .wrist {
+  fill: url(#rh-w);
   stroke: #6f7883;
-  stroke-width: 1.1;
+  stroke-width: 0.6;
 }
 
 .robohand .seam {
   fill: none;
-  stroke: #ffffff;
-  stroke-opacity: 0.7;
-  stroke-width: 1;
+  stroke: #7f8893;
+  stroke-width: 0.7;
+  stroke-opacity: 0.65;
+  stroke-linecap: round;
 }
 
-.robohand .wrist {
-  fill: url(#rh-wg);
-  stroke: #5f6872;
-  stroke-width: 1;
+.robohand .palm-seam {
+  stroke-opacity: 0.45;
 }
 
-.robohand .collar {
-  fill: #4a515c;
-}
-
-.robohand .sensor {
-  fill: #343b45;
-}
-
-.robohand .sensor-ring {
+.robohand .hl {
   fill: none;
-  stroke: #9aa3ad;
-  stroke-width: 1;
-}
-
-.robohand .ph {
-  fill: url(#rh-fg);
-  stroke: #7a838e;
-  stroke-width: 0.8;
+  stroke: #ffffff;
+  stroke-width: 0.9;
+  stroke-opacity: 0.6;
+  stroke-linecap: round;
 }
 
 .robohand .pad {
-  fill: #6b737e;
+  fill: #6c7580;
+  opacity: 0.9;
 }
 
-.robohand .hinge {
-  fill: #596170;
-}
-
-.robohand .pin {
-  fill: #d4dae0;
-}
-
-/* idle: fingers breathe very slightly, staggered; inner joints curl a touch for a life-like feel */
-.robohand .finger,
-.robohand .pip,
-.robohand .dip {
+/* idle: fingers sway very slightly about their knuckles, staggered */
+.robohand .finger {
   transform-box: view-box;
-  animation: hand-breathe 3.4s ease-in-out infinite;
+  animation: hand-breathe 3.6s ease-in-out infinite;
 }
 
-.robohand .pip { animation-name: pip-breathe; }
-.robohand .dip { animation-name: dip-breathe; }
-.robohand .f2, .robohand .f2 .pip, .robohand .f2 .dip { animation-delay: .35s; }
-.robohand .f3, .robohand .f3 .pip, .robohand .f3 .dip { animation-delay: .7s; }
-.robohand .f4, .robohand .f4 .pip, .robohand .f4 .dip { animation-delay: 1.05s; }
+.robohand .f2 { animation-delay: .35s; }
+.robohand .f3 { animation-delay: .7s; }
+.robohand .f4 { animation-delay: 1.05s; }
 .robohand .thumb { animation-name: thumb-breathe; animation-delay: .5s; }
-.robohand .thumb .dip { animation-delay: .5s; }
 
 @keyframes hand-breathe {
   0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(-2.5deg); }
-}
-
-@keyframes pip-breathe {
-  0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(6deg); }
-}
-
-@keyframes dip-breathe {
-  0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(5deg); }
+  50%      { transform: rotate(-2.2deg); }
 }
 
 @keyframes thumb-breathe {
   0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(5deg); }
+  50%      { transform: rotate(3deg); }
 }
 
 /* wave: the whole hand rocks about the wrist, fingers fan out a little */
@@ -306,14 +279,14 @@ tr.pub:target td {
   100% { transform: rotate(0deg); }
 }
 
-@keyframes fan1 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(9deg); } }
-@keyframes fan2 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(3deg); } }
-@keyframes fan3 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-3deg); } }
-@keyframes fan4 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-10deg); } }
-@keyframes fan-thumb { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(14deg); } }
+@keyframes fan1 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-7deg); } }
+@keyframes fan2 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-2deg); } }
+@keyframes fan3 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(3deg); } }
+@keyframes fan4 { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(8deg); } }
+@keyframes fan-thumb { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-10deg); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .robohand, .robohand .finger, .robohand .pip, .robohand .dip { animation: none !important; }
+  .robohand, .robohand .finger { animation: none !important; }
 }
 
 /* ---------- journey map ---------- */
