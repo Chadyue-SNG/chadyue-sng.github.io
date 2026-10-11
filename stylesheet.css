@@ -176,51 +176,57 @@ tr.pub:target td {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 14px;
-  color: #777;
-  font-size: 12px;
-  line-height: 1.35;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
   cursor: default;
 }
 
 .now-city {
-  font-size: 13px;
-  color: #555;
+  font-size: 15px;
+  color: #333;
 }
 
 .robohand {
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   flex: 0 0 auto;
   overflow: visible;
   transform-origin: 50% 96%;
   cursor: pointer;
 }
 
+/* brushed-silver body (Sharpa Wave style): gradient fill, graphite outlines, dark sensor pads */
 .robohand .palm,
 .robohand .wrist {
-  fill: #fff;
-  stroke: #1772d0;
-  stroke-width: 4;
+  fill: url(#rh-silver);
+  stroke: #7c8693;
+  stroke-width: 2.4;
 }
 
 .robohand .sensor {
-  fill: #e8f0fa;
-  stroke: #1772d0;
-  stroke-width: 3;
+  fill: #2f3744;
+  stroke: #7c8693;
+  stroke-width: 2;
 }
 
 .robohand .finger path {
   fill: none;
-  stroke: #1772d0;
-  stroke-width: 6;
+  stroke: url(#rh-silver);
+  stroke-width: 6.4;
   stroke-linecap: round;
   stroke-linejoin: round;
+  paint-order: stroke;
 }
 
 .robohand .finger .joint {
-  fill: #fff;
+  fill: #3b4350;
+}
+
+.robohand .finger .tip {
+  fill: #2f3744;
 }
 
 /* idle: fingers breathe very slightly, staggered */
