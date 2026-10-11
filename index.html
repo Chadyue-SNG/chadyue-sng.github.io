@@ -26,6 +26,14 @@
       tr.pub:hover td.pubcell { background: #f6f8fb; }
       tr.pub[bgcolor]:hover td.pubcell { background: #fff9b8; }
 
+      /* The list is a fixed-height window (as tall as the ML tab's five papers) that scrolls with the mouse wheel. */
+      .publist-wrap { position: relative; }
+      #publist { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c9d3df transparent; }
+      #publist::-webkit-scrollbar { width: 6px; }
+      #publist::-webkit-scrollbar-thumb { background: #c9d3df; border-radius: 3px; }
+      .publist-wrap.more::after { content: ""; position: absolute; left: 0; right: 8px; bottom: 0; height: 40px; pointer-events: none;
+                                  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff); }
+
       /* Profile photo: smaller circle, not clickable, flips to a second photo on hover. */
       .avatar { width: 86%; aspect-ratio: 1 / 1; margin: 0 auto; perspective: 900px; }
       .avatar-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
@@ -140,6 +148,8 @@
             </tr>
           </tbody></table>
 
+          <div class="publist-wrap">
+          <div id="publist">
           <table style="width:100%;border:0px;border-spacing:0px 4px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 <tr class="pub" id="p27" data-tags="ml">
@@ -746,6 +756,8 @@
 </tr>
 
           </tbody></table>
+          </div>
+          </div>
 
           <!-- ======================= Awards ======================= -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -845,10 +857,27 @@
         var tabs = Array.prototype.slice.call(document.querySelectorAll('#pubtabs button'));
         var rows = Array.prototype.slice.call(document.querySelectorAll('tr.pub'));
         function has(row, f) { return (' ' + (row.getAttribute('data-tags') || '') + ' ').indexOf(' ' + f + ' ') !== -1; }
+        var list = document.getElementById('publist'), wrap = list.parentNode;
+        function updateFade() { wrap.classList.toggle('more', list.scrollTop + list.clientHeight < list.scrollHeight - 2); }
         function apply(f) {
           tabs.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-filter') === f); });
           rows.forEach(function (r) { r.style.display = (f === 'all' || has(r, f)) ? '' : 'none'; });
+          list.scrollTop = 0;
+          updateFade();
         }
+        // Reference height = the ML & embodied AI tab (five papers); every tab gets the same window.
+        function fitHeight() {
+          var prev = rows.map(function (r) { return r.style.display; });
+          rows.forEach(function (r) { r.style.display = has(r, 'ml') ? '' : 'none'; });
+          list.style.maxHeight = 'none';
+          var h = list.scrollHeight;
+          rows.forEach(function (r, i) { r.style.display = prev[i]; });
+          list.style.maxHeight = h + 'px';
+          updateFade();
+        }
+        list.addEventListener('scroll', updateFade);
+        var resizeTimer;
+        window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(fitHeight, 150); });
         tabs.forEach(function (b) {
           var f = b.getAttribute('data-filter');
           var n = f === 'all' ? rows.length : rows.filter(function (r) { return has(r, f); }).length;
@@ -868,7 +897,10 @@
           else { apply('all'); }
         }
         window.addEventListener('hashchange', fromHash);
+        fitHeight();
         fromHash();
+        window.addEventListener('load', fitHeight);
+        if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitHeight); }
       })();
     </script>
   </body>
