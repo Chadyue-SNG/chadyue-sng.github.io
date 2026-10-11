@@ -174,6 +174,8 @@ tr.pub:target td {
 /* ---------- journey map ---------- */
 .journey {
   position: relative;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .journey svg {
@@ -311,54 +313,6 @@ tr.pub:target td {
   color: #777;
 }
 
-/* ---------- tactile canvas ---------- */
-.tactile canvas {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-  cursor: crosshair;
-  touch-action: none;
-}
-
-.tactile-ui {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #777;
-}
-
-.tactile-hint {
-  display: block;
-}
-
-.tactile-modes {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
-}
-
-.tactile-modes button {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #1772d0;
-  background: none;
-  border: 1px solid #cfd8e3;
-  border-radius: 10px;
-  padding: 1px 7px;
-  margin-left: 3px;
-  cursor: pointer;
-}
-
-.tactile-modes button:hover {
-  color: #f09228;
-  border-color: #f09228;
-}
-
-.tactile-modes button.active {
-  color: #fff;
-  background: #1772d0;
-  border-color: #1772d0;
-}
 
 .fade {
   transition: opacity .2s ease-in-out;

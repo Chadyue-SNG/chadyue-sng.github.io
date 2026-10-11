@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011o">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011p">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -93,10 +93,10 @@
             </tr>
           </tbody></table>
 
-          <!-- ======================= Journey map + tactile canvas ======================= -->
+          <!-- ======================= Journey map ======================= -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:0 8px 8px 16px;width:66%;vertical-align:top">
+              <td style="padding:0 16px 8px 16px;width:100%;vertical-align:top">
                 <div class="journey" id="journey">
                   <svg id="journey-svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of the places I have studied and worked">
                     <rect class="sea" x="0" y="0" width="800" height="400"/>
@@ -106,19 +106,6 @@
                   </svg>
                   <div class="journey-tip" id="journey-tip" hidden></div>
                   <p class="journey-caption">Nanjing &rarr; Paris &rarr; Singapore &rarr; Hong Kong &rarr; Lausanne &rarr; Shenzhen &rarr; Shanghai &nbsp;&middot;&nbsp; hover a stop</p>
-                </div>
-              </td>
-              <td style="padding:0 16px 8px 8px;width:34%;vertical-align:top">
-                <div class="tactile" id="tactile-box">
-                  <canvas id="tactile" aria-label="Interactive tactile sensor array: move the pointer over it to press"></canvas>
-                  <div class="tactile-ui">
-                    <span class="tactile-hint">Touch me &mdash; a 16&times;16 tactile array.</span>
-                    <span class="tactile-modes">
-                      <button type="button" data-mode="array" class="active">array</button>
-                      <button type="button" data-mode="gel">gel</button>
-                      <button type="button" data-mode="oct">OCT</button>
-                    </span>
-                  </div>
                 </div>
               </td>
             </tr>
@@ -1027,131 +1014,6 @@
         }
       })();
 
-      // ---------------------------------------------------------------- Tactile array canvas
-      (function () {
-        var cv = document.getElementById('tactile'); if (!cv || !cv.getContext) { return; }
-        var ctx = cv.getContext('2d'), N = 16, P = new Float32Array(N * N), mode = 'array', finger = null, raf = 0;
-        var dpr = Math.min(2, window.devicePixelRatio || 1), W = 0;
-        var off = document.createElement('canvas'); off.width = N; off.height = N;
-        var octx = off.getContext('2d'), img = octx.createImageData(N, N);
-        var SIGMA = 1.6, DECAY = 0.90;
-
-        function resize() { W = Math.max(120, Math.round(cv.clientWidth)); cv.width = W * dpr; cv.height = W * dpr; draw(); }
-        // blue -> cyan -> green -> yellow -> red
-        var CM = [[0, 28, 64, 170], [0.25, 40, 170, 225], [0.5, 90, 205, 110], [0.75, 250, 210, 60], [1, 225, 50, 40]];
-        function cmap(v) {
-          v = v < 0 ? 0 : v > 1 ? 1 : v;
-          for (var i = 1; i < CM.length; i++) {
-            if (v <= CM[i][0]) {
-              var a = CM[i - 1], b = CM[i], t = (v - a[0]) / (b[0] - a[0]);
-              return [a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t, a[3] + (b[3] - a[3]) * t];
-            }
-          }
-          return [225, 50, 40];
-        }
-        function press(gx, gy, amp) {
-          for (var y = 0; y < N; y++) for (var x = 0; x < N; x++) {
-            var dx = x + 0.5 - gx, dy = y + 0.5 - gy, v = amp * Math.exp(-(dx * dx + dy * dy) / (2 * SIGMA * SIGMA));
-            if (v > P[y * N + x]) { P[y * N + x] = v; }
-          }
-        }
-        function step() {
-          var alive = false;
-          for (var i = 0; i < P.length; i++) { P[i] *= DECAY; if (P[i] < 0.004) { P[i] = 0; } else { alive = true; } }
-          if (finger) { press(finger.gx, finger.gy, 1); alive = true; }
-          draw();
-          raf = alive ? requestAnimationFrame(step) : 0;
-        }
-        function kick() { if (!raf) { raf = requestAnimationFrame(step); } }
-
-        function drawArray() {
-          var cell = cv.width / N, gap = Math.max(1, cell * 0.12);
-          ctx.fillStyle = '#1b2330'; ctx.fillRect(0, 0, cv.width, cv.height);
-          for (var y = 0; y < N; y++) for (var x = 0; x < N; x++) {
-            var v = P[y * N + x], c = cmap(v);
-            ctx.fillStyle = v < 0.02 ? '#2a3442' : 'rgb(' + (c[0] | 0) + ',' + (c[1] | 0) + ',' + (c[2] | 0) + ')';
-            ctx.fillRect(x * cell + gap / 2, y * cell + gap / 2, cell - gap, cell - gap);
-          }
-        }
-        function drawGel() {
-          // GelSight-style shading: surface gradients drive the red/green channels, depth drives blue
-          var d = img.data;
-          for (var y = 0; y < N; y++) for (var x = 0; x < N; x++) {
-            var i = y * N + x;
-            var gx = (P[y * N + Math.min(N - 1, x + 1)] - P[y * N + Math.max(0, x - 1)]) * 0.5;
-            var gy = (P[Math.min(N - 1, y + 1) * N + x] - P[Math.max(0, y - 1) * N + x]) * 0.5;
-            d[i * 4] = 70 + 420 * gx; d[i * 4 + 1] = 72 + 420 * gy; d[i * 4 + 2] = 90 + 150 * P[i]; d[i * 4 + 3] = 255;
-          }
-          octx.putImageData(img, 0, 0);
-          ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-          ctx.drawImage(off, 0, 0, cv.width, cv.height);
-        }
-        function drawOct() {
-          // endoscopic-OCT-style B-scan through the row of maximum pressure: the film deforms, tissue layers follow
-          var w = cv.width, h = cv.height, row = 0, best = -1;
-          for (var y = 0; y < N; y++) { var sMax = 0; for (var x = 0; x < N; x++) { sMax = Math.max(sMax, P[y * N + x]); } if (sMax > best) { best = sMax; row = y; } }
-          if (finger) { row = Math.max(0, Math.min(N - 1, Math.floor(finger.gy))); }
-          ctx.fillStyle = '#05070b'; ctx.fillRect(0, 0, w, h);
-          function prof(u) { // linear interpolation of the row profile at u in [0,1]
-            var fx = u * N - 0.5, x0 = Math.max(0, Math.min(N - 1, Math.floor(fx))), x1 = Math.min(N - 1, x0 + 1), t = Math.max(0, Math.min(1, fx - x0));
-            return P[row * N + x0] * (1 - t) + P[row * N + x1] * t;
-          }
-          var top = h * 0.30, depth = h * 0.22;
-          for (var L = 5; L >= 0; L--) {
-            var yOff = L * h * 0.085, fade = L === 0 ? 1 : 0.9 - L * 0.13, damp = L === 0 ? 1 : Math.max(0, 1 - L * 0.22);
-            ctx.beginPath();
-            for (var px = 0; px <= w; px += 2) { var yy = top + yOff + depth * prof(px / w) * damp; if (px === 0) { ctx.moveTo(px, yy); } else { ctx.lineTo(px, yy); } }
-            ctx.strokeStyle = L === 0 ? 'rgba(255,235,170,' + fade + ')' : 'rgba(180,200,255,' + fade * 0.55 + ')';
-            ctx.lineWidth = (L === 0 ? 2.2 : 1.1) * dpr; ctx.stroke();
-          }
-          // speckle
-          ctx.fillStyle = 'rgba(200,210,255,0.18)';
-          for (var k = 0; k < 160; k++) { var sx = (k * 7919) % w, sy = top + 6 + ((k * 104729) % (h - top - 12)); ctx.fillRect(sx, sy, dpr, dpr); }
-          // scan-line marker for the finger position
-          if (finger) {
-            var fx2 = (finger.gx / N) * w; ctx.strokeStyle = 'rgba(255,120,80,0.8)'; ctx.lineWidth = dpr;
-            ctx.setLineDash([4 * dpr, 4 * dpr]); ctx.beginPath(); ctx.moveTo(fx2, 0); ctx.lineTo(fx2, h); ctx.stroke(); ctx.setLineDash([]);
-          }
-          ctx.fillStyle = 'rgba(220,230,255,0.55)'; ctx.font = (11 * dpr) + 'px Lato, sans-serif'; ctx.fillText('B-scan \u00b7 row ' + (row + 1), 8 * dpr, 16 * dpr);
-        }
-        function draw() { if (!W) { return; } if (mode === 'gel') { drawGel(); } else if (mode === 'oct') { drawOct(); } else { drawArray(); } }
-
-        function toGrid(ev) {
-          var r = cv.getBoundingClientRect(), pt = ev.touches ? ev.touches[0] : ev;
-          return { gx: (pt.clientX - r.left) / r.width * N, gy: (pt.clientY - r.top) / r.height * N };
-        }
-        cv.addEventListener('mousemove', function (ev) { finger = toGrid(ev); kick(); });
-        cv.addEventListener('mouseleave', function () { finger = null; kick(); });
-        cv.addEventListener('touchstart', function (ev) { finger = toGrid(ev); kick(); }, { passive: true });
-        cv.addEventListener('touchmove', function (ev) { finger = toGrid(ev); kick(); }, { passive: true });
-        cv.addEventListener('touchend', function () { finger = null; kick(); });
-        Array.prototype.forEach.call(document.querySelectorAll('.tactile-modes button'), function (b) {
-          b.addEventListener('click', function () {
-            mode = b.getAttribute('data-mode');
-            Array.prototype.forEach.call(document.querySelectorAll('.tactile-modes button'), function (o) { o.classList.toggle('active', o === b); });
-            draw(); demo();
-          });
-        });
-        // a short synthetic touch so the array is visibly alive before anyone hovers
-        var demoTimer = 0;
-        function demo() {
-          if (finger) { return; }
-          clearInterval(demoTimer);
-          var t0 = Date.now();
-          demoTimer = setInterval(function () {
-            var u = (Date.now() - t0) / 1600;
-            if (u >= 1 || finger) { clearInterval(demoTimer); demoTimer = 0; kick(); return; }
-            press(N * (0.3 + 0.4 * u), N * (0.65 - 0.35 * Math.sin(u * Math.PI)), 0.85); kick();
-          }, 40);
-        }
-        resize();
-        var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 150); });
-        if (document.fonts && document.fonts.ready) { document.fonts.ready.then(resize); }
-        if ('IntersectionObserver' in window) {
-          var io = new IntersectionObserver(function (es) { if (es.some(function (e) { return e.isIntersecting; })) { demo(); io.disconnect(); } }, { threshold: 0.4 });
-          io.observe(cv);
-        } else { demo(); }
-      })();
     </script>
   </body>
 </html>
