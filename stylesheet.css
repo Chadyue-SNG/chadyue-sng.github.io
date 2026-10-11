@@ -126,6 +126,82 @@ h2 {
   }
 }
 
+/* research overview: one line per area, Zhao-Lab style */
+p.areas {
+  margin: 0 0 6px 0;
+}
+
+/* experience table */
+table.exp {
+  width: 100%;
+  border: 0;
+  border-spacing: 0 8px;
+  border-collapse: separate;
+}
+
+table.exp td {
+  vertical-align: top;
+  padding: 0;
+}
+
+table.exp td.when {
+  width: 24%;
+  padding-right: 12px;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* publication topic tabs */
+#pubtabs {
+  margin-top: 10px;
+}
+
+#pubtabs button {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #1772d0;
+  background: #fff;
+  border: 1px solid #cfd8e3;
+  border-radius: 14px;
+  padding: 4px 11px;
+  margin: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+#pubtabs button:hover {
+  color: #f09228;
+  border-color: #f09228;
+}
+
+#pubtabs button.active {
+  color: #fff;
+  background: #1772d0;
+  border-color: #1772d0;
+}
+
+#pubtabs button .count {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+/* chronological paper number shown in front of each title */
+.pubnum {
+  display: inline-block;
+  min-width: 1.6em;
+  margin-right: 4px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #eef2f7;
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* flash the row that a numbered link in the Research section points at */
+tr.pub:target td {
+  box-shadow: inset 0 0 0 2px #f09228;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
