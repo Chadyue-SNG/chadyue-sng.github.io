@@ -17,7 +17,7 @@ Static site (one `index.html` + `stylesheet.css`), built on the layout of
 
 * Add a publication: copy any `<tr class="pub"> … </tr>` block in `index.html`, change the title, authors, venue, links and one-line description. Add `bgcolor="#ffffd0"` to highlight it.
 * Numbering is chronological (oldest = 1), so a new paper gets the next number: set `id="p<N>"`, put `<span class="pubnum"><N></span>` before the title, and place the row at the top of the list.
-* Topics: set `data-tags` on the row to any of `ml`, `tactile`, `robotics`, `soft` (space-separated). The tab buttons in `#pubtabs` filter on these and show counts automatically. To reference the paper from the Research overview, link to `#p<N>`.
+* Topics: set `data-tags` on the row to any of `ml`, `tactile`, `robotics` (space-separated). The tab buttons in `#pubtabs` filter on these and show counts automatically. To reference the paper from the Research overview, link to `#p<N>`.
 
 ## Preview locally
 
