@@ -137,26 +137,6 @@ p.areas {
   margin: 0 0 6px 0;
 }
 
-/* experience table */
-table.exp {
-  width: 100%;
-  border: 0;
-  border-spacing: 0 8px;
-  border-collapse: separate;
-}
-
-table.exp td {
-  vertical-align: top;
-  padding: 0;
-}
-
-table.exp td.when {
-  width: 24%;
-  padding-right: 12px;
-  color: #777;
-  white-space: nowrap;
-}
-
 /* publication topic tabs */
 #pubtabs {
   margin-top: 10px;
