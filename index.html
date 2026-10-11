@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012e">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012f">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -103,13 +103,25 @@
                       <filter id="rh-shadow" x="-25%" y="-25%" width="150%" height="150%">
                         <feDropShadow dx="0.6" dy="1.6" stdDeviation="1.4" flood-color="#1b2330" flood-opacity="0.22"/>
                       </filter>
+                      <!-- flat silhouette of the hand at rest, reused for the ghost trails while waving -->
+                      <g id="rh-sil">
+                        <path d="M35.58 56.03 L31.40 24.19 A2.90 2.90 0 0 1 37.12 23.28 L42.99 54.85 Z"/>
+                        <path d="M45.37 51.96 L44.65 15.96 A3.00 3.00 0 0 1 50.64 15.70 L53.06 51.63 Z"/>
+                        <path d="M55.51 51.93 L58.62 18.92 A2.85 2.85 0 0 1 64.31 19.32 L62.79 52.44 Z"/>
+                        <path d="M65.11 55.12 L71.78 29.56 A2.60 2.60 0 0 1 76.85 30.73 L71.64 56.63 Z"/>
+                        <path d="M34.74 71.05 L15.46 56.72 A3.50 3.50 0 0 1 19.38 50.91 L39.89 63.42 Z"/>
+                        <path d="M36 77 C33 71 31 61.5 31.6 52.6 C33 47.6 41.5 45.6 50.5 45.2 C59.5 44.9 67.8 46.6 71.2 50.4 C71.6 61 69.2 71 66 77 Z"/>
+                        <path d="M40.4 76.6 L62.8 76.6 C62.4 80 61.8 83 61 86 L42.2 86 C41.4 83 40.8 80 40.4 76.6 Z"/>
+                      </g>
                     </defs>
+                    <use class="ghost g2" href="#rh-sil"/>
+                    <use class="ghost g1" href="#rh-sil"/>
                     <g class="hand" filter="url(#rh-shadow)">
-                      <g class="finger f1" style="transform-origin:38.50px 50.50px"><path class="body" d="M35.58 56.03 L31.40 24.19 A2.90 2.90 0 0 1 37.12 23.28 L42.99 54.85 Z"/><path class="seam" d="M33.52 39.14 Q36.45 37.56 39.72 38.16"/><path class="seam" d="M32.35 30.21 Q35.04 28.67 38.08 29.30"/><path class="hl" d="M36.14 51.89 L32.46 24.52"/><ellipse class="pad" cx="34.23" cy="23.54" rx="1.80" ry="1.45" transform="rotate(-9 34.23 23.54)"/></g><g class="finger f2" style="transform-origin:49.00px 46.80px"><path class="body" d="M45.37 51.96 L44.65 15.96 A3.00 3.00 0 0 1 50.64 15.70 L53.06 51.63 Z"/><path class="seam" d="M45.18 33.35 Q48.36 32.11 51.63 33.07"/><path class="seam" d="M44.97 23.15 Q47.91 21.92 50.95 22.89"/><path class="hl" d="M46.40 47.91 L45.67 16.42"/><ellipse class="pad" cx="47.64" cy="15.63" rx="1.86" ry="1.45" transform="rotate(-2.5 47.64 15.63)"/></g><g class="finger f3" style="transform-origin:59.50px 47.20px"><path class="body" d="M55.51 51.93 L58.62 18.92 A2.85 2.85 0 0 1 64.31 19.32 L62.79 52.44 Z"/><path class="seam" d="M57.31 34.62 Q60.44 33.73 63.42 35.04"/><path class="seam" d="M58.18 25.35 Q61.09 24.46 63.85 25.75"/><path class="hl" d="M56.99 48.03 L59.58 19.49"/><ellipse class="pad" cx="61.48" cy="18.92" rx="1.77" ry="1.45" transform="rotate(4 61.48 18.92)"/></g><g class="finger f4" style="transform-origin:69.50px 51.00px"><path class="body" d="M65.11 55.12 L71.78 29.56 A2.60 2.60 0 0 1 76.85 30.73 L71.64 56.63 Z"/><path class="seam" d="M68.93 41.01 Q71.91 40.57 74.39 42.28"/><path class="seam" d="M70.75 34.05 Q73.53 33.56 75.81 35.22"/><path class="hl" d="M67.18 51.49 L72.64 30.28"/><ellipse class="pad" cx="74.36" cy="29.95" rx="1.61" ry="1.45" transform="rotate(13 74.36 29.95)"/></g><g class="finger thumb" style="transform-origin:34.00px 67.00px"><path class="body" d="M34.74 73.05 L15.46 58.72 A3.50 3.50 0 0 1 19.38 52.91 L39.89 65.42 Z"/><path class="seam" d="M24.07 64.92 Q25.30 61.13 28.35 58.57"/><path class="seam" d="M18.39 60.72 Q19.45 57.19 22.33 54.88"/><path class="hl" d="M32.93 70.38 L16.44 58.17"/><ellipse class="pad" cx="17.25" cy="55.70" rx="2.17" ry="1.45" transform="rotate(-56 17.25 55.70)"/></g>
-                      <path class="palm" d="M37 84 C33.5 76 31 62 31.6 52.6 C33 47.6 41.5 45.6 50.5 45.2 C59.5 44.9 67.8 46.6 71.2 50.4 C71.8 62 69.4 76 66 84 Z"/>
+                      <g class="finger f1" style="transform-origin:38.50px 50.50px"><path class="body" d="M35.58 56.03 L31.40 24.19 A2.90 2.90 0 0 1 37.12 23.28 L42.99 54.85 Z"/><path class="seam" d="M33.52 39.14 Q36.45 37.56 39.72 38.16"/><path class="seam" d="M32.35 30.21 Q35.04 28.67 38.08 29.30"/><path class="hl" d="M36.14 51.89 L32.46 24.52"/><ellipse class="pad" cx="34.23" cy="23.54" rx="1.80" ry="1.45" transform="rotate(-9 34.23 23.54)"/></g><g class="finger f2" style="transform-origin:49.00px 46.80px"><path class="body" d="M45.37 51.96 L44.65 15.96 A3.00 3.00 0 0 1 50.64 15.70 L53.06 51.63 Z"/><path class="seam" d="M45.18 33.35 Q48.36 32.11 51.63 33.07"/><path class="seam" d="M44.97 23.15 Q47.91 21.92 50.95 22.89"/><path class="hl" d="M46.40 47.91 L45.67 16.42"/><ellipse class="pad" cx="47.64" cy="15.63" rx="1.86" ry="1.45" transform="rotate(-2.5 47.64 15.63)"/></g><g class="finger f3" style="transform-origin:59.50px 47.20px"><path class="body" d="M55.51 51.93 L58.62 18.92 A2.85 2.85 0 0 1 64.31 19.32 L62.79 52.44 Z"/><path class="seam" d="M57.31 34.62 Q60.44 33.73 63.42 35.04"/><path class="seam" d="M58.18 25.35 Q61.09 24.46 63.85 25.75"/><path class="hl" d="M56.99 48.03 L59.58 19.49"/><ellipse class="pad" cx="61.48" cy="18.92" rx="1.77" ry="1.45" transform="rotate(4 61.48 18.92)"/></g><g class="finger f4" style="transform-origin:69.50px 51.00px"><path class="body" d="M65.11 55.12 L71.78 29.56 A2.60 2.60 0 0 1 76.85 30.73 L71.64 56.63 Z"/><path class="seam" d="M68.93 41.01 Q71.91 40.57 74.39 42.28"/><path class="seam" d="M70.75 34.05 Q73.53 33.56 75.81 35.22"/><path class="hl" d="M67.18 51.49 L72.64 30.28"/><ellipse class="pad" cx="74.36" cy="29.95" rx="1.61" ry="1.45" transform="rotate(13 74.36 29.95)"/></g><g class="finger thumb" style="transform-origin:34.00px 65.00px"><path class="body" d="M34.74 71.05 L15.46 56.72 A3.50 3.50 0 0 1 19.38 50.91 L39.89 63.42 Z"/><path class="seam" d="M24.07 62.92 Q25.30 59.13 28.35 56.57"/><path class="seam" d="M18.39 58.72 Q19.45 55.19 22.33 52.88"/><path class="hl" d="M32.93 68.38 L16.44 56.17"/><ellipse class="pad" cx="17.25" cy="53.70" rx="2.17" ry="1.45" transform="rotate(-56 17.25 53.70)"/></g>
+                      <path class="palm" d="M36 77 C33 71 31 61.5 31.6 52.6 C33 47.6 41.5 45.6 50.5 45.2 C59.5 44.9 67.8 46.6 71.2 50.4 C71.6 61 69.2 71 66 77 Z"/>
                       <path class="seam palm-seam" d="M35 57.5 Q51 53.5 68.5 57"/>
-                      <path class="wrist" d="M39.2 83.6 L63 83.6 C62.6 87.5 62 91 61.2 94.2 L41 94.2 C40.2 91 39.6 87.5 39.2 83.6 Z"/>
-                      <path class="seam" d="M40.2 88.6 L61.9 88.6"/>
+                      <path class="wrist" d="M40.4 76.6 L62.8 76.6 C62.4 80 61.8 83 61 86 L42.2 86 C41.4 83 40.8 80 40.4 76.6 Z"/>
+                      <path class="seam" d="M41.6 81.4 L61.6 81.4"/>
                     </g>
                   </svg>
                   </div>
@@ -1079,7 +1091,10 @@
         var hand = document.getElementById('robohand'); if (!hand) { return; }
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         function wave() { if (reduce || hand.classList.contains('wave')) { return; } hand.classList.add('wave'); }
-        hand.addEventListener('animationend', function (e) { if (e.target === hand) { hand.classList.remove('wave'); } });
+        hand.addEventListener('animationend', function (e) {                   // the ghosts lag ~0.1 s behind the hand itself
+          if (e.animationName !== 'hand-wave') { return; }
+          if (e.target === hand || e.target.classList.contains('hand')) { setTimeout(function () { hand.classList.remove('wave'); }, 160); }
+        });
         var av = document.querySelector('.avatar'); if (av) { av.addEventListener('mouseenter', wave); }
         hand.addEventListener('click', wave);
         setTimeout(wave, 1000);                                                  // hello on arrival

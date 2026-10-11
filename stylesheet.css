@@ -179,7 +179,7 @@ tr.pub:target td {
 .hand-wrap {
   position: absolute;
   right: -14px;
-  bottom: -8px;
+  bottom: -12px;
   width: 86px;
   height: 86px;
   z-index: 2;
@@ -192,9 +192,23 @@ tr.pub:target td {
   height: 100%;
   display: block;
   overflow: visible;
-  transform-origin: 50% 96%;
   cursor: pointer;
   pointer-events: auto;
+}
+
+/* the hand and its ghost trails all pivot about the wrist */
+.robohand .hand,
+.robohand .ghost {
+  transform-box: view-box;
+  transform-origin: 51px 87px;
+}
+
+/* ghost trails: flat, blurred silhouettes that follow the wave with a slight lag; hidden when idle */
+.robohand .ghost {
+  fill: #b7bfc9;
+  opacity: 0;
+  filter: blur(1px);
+  pointer-events: none;
 }
 
 /* grey-white hand: one soft gradient over palm and tapered fingers, hairline seams, light edge highlights */
@@ -258,10 +272,13 @@ tr.pub:target td {
   50%      { transform: rotate(3deg); }
 }
 
-/* wave: the whole hand rocks about the wrist, fingers fan out a little */
-.robohand.wave {
-  animation: hand-wave 1.4s ease-in-out;
-}
+/* wave: the whole hand rocks about the wrist, fingers fan out a little, two ghosts trail behind */
+.robohand.wave .hand { animation: hand-wave 1.4s ease-in-out; }
+.robohand.wave .g1   { animation: hand-wave 1.4s ease-in-out .05s, ghost-fade-1 1.5s linear; }
+.robohand.wave .g2   { animation: hand-wave 1.4s ease-in-out .1s,  ghost-fade-2 1.5s linear; }
+
+@keyframes ghost-fade-1 { 0% { opacity: 0; } 8%, 86% { opacity: .45; } 100% { opacity: 0; } }
+@keyframes ghost-fade-2 { 0% { opacity: 0; } 8%, 86% { opacity: .24; } 100% { opacity: 0; } }
 
 .robohand.wave .f1 { animation: fan1 1.4s ease-in-out; }
 .robohand.wave .f2 { animation: fan2 1.4s ease-in-out; }
@@ -285,7 +302,7 @@ tr.pub:target td {
 @keyframes fan-thumb { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(-10deg); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .robohand, .robohand .finger { animation: none !important; }
+  .robohand .hand, .robohand .ghost, .robohand .finger { animation: none !important; }
 }
 
 /* ---------- journey map ---------- */
