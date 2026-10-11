@@ -190,64 +190,95 @@ tr.pub:target td {
 }
 
 .robohand {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   flex: 0 0 auto;
   overflow: visible;
   transform-origin: 50% 96%;
   cursor: pointer;
 }
 
-/* brushed-silver body (Sharpa Wave style): gradient fill, graphite outlines, dark sensor pads */
-.robohand .palm,
+/* grey-white shaded body (after the Sharpa Wave hand): gradient-shaded phalanges, graphite hinges */
+.robohand .palm {
+  fill: url(#rh-pg);
+  stroke: #6f7883;
+  stroke-width: 1.1;
+}
+
+.robohand .seam {
+  fill: none;
+  stroke: #ffffff;
+  stroke-opacity: 0.7;
+  stroke-width: 1;
+}
+
 .robohand .wrist {
-  fill: url(#rh-silver);
-  stroke: #7c8693;
-  stroke-width: 2.4;
+  fill: url(#rh-wg);
+  stroke: #5f6872;
+  stroke-width: 1;
+}
+
+.robohand .collar {
+  fill: #4a515c;
 }
 
 .robohand .sensor {
-  fill: #2f3744;
-  stroke: #7c8693;
-  stroke-width: 2;
+  fill: #343b45;
 }
 
-.robohand .finger path {
+.robohand .sensor-ring {
   fill: none;
-  stroke: url(#rh-silver);
-  stroke-width: 6.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke: #9aa3ad;
+  stroke-width: 1;
 }
 
-/* graphite outline drawn under each silver finger so the fingers read against white */
-.robohand .finger path.fo {
-  stroke: #7c8693;
-  stroke-width: 9;
+.robohand .ph {
+  fill: url(#rh-fg);
+  stroke: #7a838e;
+  stroke-width: 0.8;
 }
 
-.robohand .finger .joint {
-  fill: #3b4350;
+.robohand .pad {
+  fill: #6b737e;
 }
 
-.robohand .finger .tip {
-  fill: #2f3744;
+.robohand .hinge {
+  fill: #4a515c;
 }
 
-/* idle: fingers breathe very slightly, staggered */
-.robohand .finger {
+.robohand .pin {
+  fill: #d4dae0;
+}
+
+/* idle: fingers breathe very slightly, staggered; inner joints curl a touch for a life-like feel */
+.robohand .finger,
+.robohand .pip,
+.robohand .dip {
   transform-box: view-box;
   animation: hand-breathe 3.4s ease-in-out infinite;
 }
 
-.robohand .f2 { animation-delay: .35s; }
-.robohand .f3 { animation-delay: .7s; }
-.robohand .f4 { animation-delay: 1.05s; }
+.robohand .pip { animation-name: pip-breathe; }
+.robohand .dip { animation-name: dip-breathe; }
+.robohand .f2, .robohand .f2 .pip, .robohand .f2 .dip { animation-delay: .35s; }
+.robohand .f3, .robohand .f3 .pip, .robohand .f3 .dip { animation-delay: .7s; }
+.robohand .f4, .robohand .f4 .pip, .robohand .f4 .dip { animation-delay: 1.05s; }
 .robohand .thumb { animation-name: thumb-breathe; animation-delay: .5s; }
+.robohand .thumb .dip { animation-delay: .5s; }
 
 @keyframes hand-breathe {
   0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(-3.5deg); }
+  50%      { transform: rotate(-2.5deg); }
+}
+
+@keyframes pip-breathe {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(6deg); }
+}
+
+@keyframes dip-breathe {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(5deg); }
 }
 
 @keyframes thumb-breathe {
@@ -282,7 +313,7 @@ tr.pub:target td {
 @keyframes fan-thumb { 0%, 100% { transform: rotate(0); } 30%, 70% { transform: rotate(14deg); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .robohand, .robohand .finger { animation: none !important; }
+  .robohand, .robohand .finger, .robohand .pip, .robohand .dip { animation: none !important; }
 }
 
 /* ---------- journey map ---------- */
