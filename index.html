@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012c">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012d">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -88,8 +88,7 @@
                     <img class="avatar-front" src="images/wenchao.jpg?v=2" alt="profile photo">
                     <img class="avatar-back" src="images/wenchao_back.jpg?v=3" alt="">
                   </div>
-                </div>
-                <div class="now" id="now" title="Where I am right now">
+                  <div class="hand-wrap">
                   <svg class="robohand" id="robohand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
                     <defs>
                       <linearGradient id="rh-g" gradientUnits="userSpaceOnUse" x1="24" y1="18" x2="80" y2="96">
@@ -113,9 +112,6 @@
                       <path class="seam" d="M40.2 88.6 L61.9 88.6"/>
                     </g>
                   </svg>
-                  <div class="now-text">
-                    <div class="now-city">Shanghai</div>
-                    <div class="now-line"><span id="now-time">&ndash;&ndash;:&ndash;&ndash;</span><span id="now-wx"></span></div>
                   </div>
                 </div>
               </td>
@@ -1075,45 +1071,16 @@
         }
       })();
 
-      // ---------------------------------------------------------------- "Shanghai now": clock + weather, and the waving hand
+      // ---------------------------------------------------------------- the waving hand
       (function () {
-        var timeEl = document.getElementById('now-time'), wxEl = document.getElementById('now-wx'), hand = document.getElementById('robohand');
-        if (!timeEl || !hand) { return; }
-        // clock in Shanghai local time, refreshed on the minute
-        var fmt = (window.Intl && Intl.DateTimeFormat) ? new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false }) : null;
-        function tick() {
-          var d = new Date();
-          timeEl.textContent = fmt ? fmt.format(d) : d.toUTCString().slice(17, 22);
-          setTimeout(tick, 60000 - (d.getSeconds() * 1000 + d.getMilliseconds()) + 50);
-        }
-        tick();
-        // weather from open-meteo (free, no key, CORS enabled); fails silently -> only the time is shown
-        var ICON = { 0: ['\u2600\ufe0f', '\ud83c\udf19'], 1: ['\ud83c\udf24\ufe0f', '\ud83c\udf19'], 2: ['\u26c5', '\u2601\ufe0f'], 3: ['\u2601\ufe0f', '\u2601\ufe0f'],
-                     45: ['\ud83c\udf2b\ufe0f', '\ud83c\udf2b\ufe0f'], 48: ['\ud83c\udf2b\ufe0f', '\ud83c\udf2b\ufe0f'],
-                     51: ['\ud83c\udf26\ufe0f', '\ud83c\udf27\ufe0f'], 53: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'], 55: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'],
-                     61: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'], 63: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'], 65: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'],
-                     71: ['\u2744\ufe0f', '\u2744\ufe0f'], 73: ['\u2744\ufe0f', '\u2744\ufe0f'], 75: ['\u2744\ufe0f', '\u2744\ufe0f'],
-                     80: ['\ud83c\udf26\ufe0f', '\ud83c\udf27\ufe0f'], 81: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'], 82: ['\ud83c\udf27\ufe0f', '\ud83c\udf27\ufe0f'],
-                     95: ['\u26c8\ufe0f', '\u26c8\ufe0f'], 96: ['\u26c8\ufe0f', '\u26c8\ufe0f'], 99: ['\u26c8\ufe0f', '\u26c8\ufe0f'] };
-        function weather() {
-          if (!window.fetch) { return; }
-          fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code,is_day&timezone=Asia%2FShanghai')
-            .then(function (r) { return r.ok ? r.json() : null; })
-            .then(function (j) {
-              if (!j || !j.current) { return; }
-              var c = j.current, icon = (ICON[c.weather_code] || ['\ud83c\udf24\ufe0f', '\ud83c\udf19'])[c.is_day ? 0 : 1];
-              wxEl.textContent = ' \u00b7 ' + Math.round(c.temperature_2m) + ' \u00b0C ' + icon;
-            })
-            .catch(function () {});
-        }
-        weather(); setInterval(weather, 30 * 60 * 1000);
-        // the hand waves: once shortly after load, whenever the photo is hovered, and when tapped itself
+        var hand = document.getElementById('robohand'); if (!hand) { return; }
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         function wave() { if (reduce || hand.classList.contains('wave')) { return; } hand.classList.add('wave'); }
         hand.addEventListener('animationend', function (e) { if (e.target === hand) { hand.classList.remove('wave'); } });
         var av = document.querySelector('.avatar'); if (av) { av.addEventListener('mouseenter', wave); }
-        hand.addEventListener('mouseenter', wave); hand.addEventListener('click', wave);
-        setTimeout(wave, 1200);
+        hand.addEventListener('click', wave);
+        setTimeout(wave, 1000);                                                  // hello on arrival
+        setInterval(function () { if (!document.hidden) { wave(); } }, 9000);   // and every so often
       })();
     </script>
   </body>

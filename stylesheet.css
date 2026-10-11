@@ -171,31 +171,30 @@ tr.pub:target td {
   box-shadow: inset 0 0 0 2px #f09228;
 }
 
-/* ---------- "Shanghai now" + waving robot hand (under the photo) ---------- */
-.now {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 14px;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.4;
-  cursor: default;
+/* ---------- waving robot hand, peeking over the lower-right edge of the photo ---------- */
+.avatar {
+  position: relative;
 }
 
-.now-city {
-  font-size: 15px;
-  color: #333;
+.hand-wrap {
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  width: 72px;
+  height: 72px;
+  z-index: 2;
+  transform: rotate(-14deg);
+  pointer-events: none;
 }
 
 .robohand {
-  width: 70px;
-  height: 70px;
-  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  display: block;
   overflow: visible;
   transform-origin: 50% 96%;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 /* grey-white hand: one soft gradient over palm and tapered fingers, hairline seams, light edge highlights */
