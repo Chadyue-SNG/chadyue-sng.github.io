@@ -189,9 +189,9 @@ tr.pub:target td {
 }
 
 .journey .land {
-  fill: #e1e8ef;
-  stroke: #c3cfdb;
-  stroke-width: 0.6;
+  fill: #d7e0ea;
+  stroke: #aebccb;
+  stroke-width: 0.7;
 }
 
 .journey .arc {
@@ -290,13 +290,19 @@ tr.pub:target td {
 }
 
 .tactile-ui {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
   margin-top: 6px;
   font-size: 12px;
   color: #777;
+}
+
+.tactile-hint {
+  display: block;
+}
+
+.tactile-modes {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
 }
 
 .tactile-modes button {
