@@ -174,7 +174,7 @@ tr.pub:target td {
 /* ---------- journey map ---------- */
 .journey {
   position: relative;
-  max-width: 660px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
