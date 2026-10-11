@@ -218,7 +218,12 @@ tr.pub:target td {
   stroke-width: 6.4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  paint-order: stroke;
+}
+
+/* graphite outline drawn under each silver finger so the fingers read against white */
+.robohand .finger path.fo {
+  stroke: #7c8693;
+  stroke-width: 9;
 }
 
 .robohand .finger .joint {
