@@ -111,9 +111,8 @@ h2 {
 
 /* "Dr." in front of the name: smaller and bold */
 .name .honorific {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  vertical-align: 1px;
 }
 
 /* .one / .two hover-reveal rules and thumbnail sizing are inlined in index.html <head>
