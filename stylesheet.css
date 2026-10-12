@@ -216,14 +216,14 @@ tr.pub:target td {
 .robohand .palm {
   fill: url(#rh-g);
   stroke: #8a939e;
-  stroke-width: 0.6;
+  stroke-width: 0.9;
   stroke-linejoin: round;
 }
 
 .robohand .wrist {
   fill: url(#rh-w);
   stroke: #6f7883;
-  stroke-width: 0.6;
+  stroke-width: 0.9;
 }
 
 .robohand .seam {
