@@ -142,7 +142,7 @@
                       <!-- soft halo in each route's own colour: a blurred, alpha-boosted copy of the arcs sits underneath them -->
                       <filter id="journey-glow" x="-10%" y="-25%" width="120%" height="150%" color-interpolation-filters="sRGB">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-                        <feComponentTransfer in="blur" result="glow"><feFuncA type="linear" slope="2.2"/></feComponentTransfer>
+                        <feComponentTransfer in="blur" result="glow"><feFuncA type="linear" slope="1.3"/></feComponentTransfer>
                         <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
                       </filter>
                     </defs>
