@@ -78,7 +78,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #11549c;
   text-decoration: none;
   background-size: 100% 1px;
 }
@@ -124,6 +124,15 @@ h2 {
   font-weight: 400;
 }
 
+/* one-line tagline under the name */
+.tagline {
+  margin: 4px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #7b8794;
+}
+
 /* research overview: one line per area, Zhao-Lab style */
 p.areas {
   margin: 0 0 6px 0;
@@ -147,8 +156,8 @@ p.areas {
 }
 
 #pubtabs button:hover {
-  color: #f09228;
-  border-color: #f09228;
+  color: #11549c;
+  border-color: #11549c;
 }
 
 #pubtabs button.active {
@@ -177,7 +186,7 @@ p.areas {
 
 /* flash the row that a numbered link in the Research section points at */
 tr.pub:target td {
-  box-shadow: inset 0 0 0 2px #f09228;
+  box-shadow: inset 0 0 0 2px #11549c;
 }
 
 /* ---------- waving robot hand, peeking over the lower-right edge of the photo ---------- */
@@ -524,7 +533,10 @@ tr.pub:target td {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background: #f2f6fb;
+  box-shadow: inset 2px 0 0 #1772d0;
+  padding: 0 4px 0 7px;
+  border-radius: 2px;
 }
 
 .colored-box {

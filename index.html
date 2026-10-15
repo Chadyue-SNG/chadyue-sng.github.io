@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012k">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012l">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -25,7 +25,9 @@
       tr.pub .papertitle { line-height: 1.35; }
       tr.pub p.desc { margin: 6px 0 0 0; color: #555; }
       tr.pub:hover td.pubcell { background: #f6f8fb; }
-      tr.pub[bgcolor]:hover td.pubcell { background: #fff9b8; }
+      /* papers I led: a 2px blue bar on the left and a very faint blue-grey tint */
+      tr.pub.lead td.pubcell { background: #f2f6fb; box-shadow: inset 2px 0 0 #1772d0; }
+      tr.pub.lead:hover td.pubcell { background: #e9f0f8; }
       /* award / front-cover notes */
       tr.pub .award { color: #c0392b; font-weight: 700; }
 
@@ -62,6 +64,7 @@
                 <p class="name" style="text-align: center;">
                   Wenchao Yue<span class="honorific">, Ph.D.</span>
                 </p>
+                <p class="tagline">Robotics engineer &middot; Embodied AI &middot; Tactile foundation models</p>
                 <p>
                   Science has been my way of seeking truth and of finding my place all around the world.
                   I received my Ph.D. in Electronic Engineering from <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong (CUHK)</a> (2026),
@@ -221,7 +224,7 @@
           <div id="publist">
           <table style="width:100%;border:0px;border-spacing:0px 4px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<tr class="pub" id="p27" data-tags="ml" bgcolor="#ffffd0">
+<tr class="pub lead" id="p27" data-tags="ml">
   <td class="pubcell">
     <span class="pubnum">27</span>
     <a href="https://doi.org/10.1088/1742-6596/3291/1/012035">
@@ -245,7 +248,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p26" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p26" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">26</span>
     <a href="https://doi.org/10.1109/TMRB.2026.3699220">
@@ -316,7 +319,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p23" data-tags="ml" bgcolor="#ffffd0">
+<tr class="pub lead" id="p23" data-tags="ml">
   <td class="pubcell">
     <span class="pubnum">23</span>
     <a href="https://doi.org/10.34133/cbsystems.0348">
@@ -360,7 +363,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p21" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p21" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">21</span>
     <a href="https://doi.org/10.1016/j.procs.2025.10.161">
@@ -381,7 +384,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p20" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p20" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">20</span>
     <a href="https://doi.org/10.1016/j.procs.2025.10.162">
@@ -423,7 +426,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p18" data-tags="tactile" bgcolor="#ffffd0">
+<tr class="pub lead" id="p18" data-tags="tactile">
   <td class="pubcell">
     <span class="pubnum">18</span>
     <a href="https://doi.org/10.1002/adrr.202400028">
@@ -446,7 +449,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p17" data-tags="tactile robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p17" data-tags="tactile robotics">
   <td class="pubcell">
     <span class="pubnum">17</span>
     <a href="https://doi.org/10.36227/techrxiv.174495651.17295903/v1">
@@ -489,7 +492,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p15" data-tags="tactile" bgcolor="#ffffd0">
+<tr class="pub lead" id="p15" data-tags="tactile">
   <td class="pubcell">
     <span class="pubnum">15</span>
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020837">
@@ -509,7 +512,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p14" data-tags="tactile robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p14" data-tags="tactile robotics">
   <td class="pubcell">
     <span class="pubnum">14</span>
     <a href="https://doi.org/10.1109/RoboSoft63089.2025.11020812">
@@ -555,7 +558,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p12" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p12" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">12</span>
     <a href="https://doi.org/10.1109/ROBIO64047.2024.10907554">
@@ -596,7 +599,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p10" data-tags="ml" bgcolor="#ffffd0">
+<tr class="pub lead" id="p10" data-tags="ml">
   <td class="pubcell">
     <span class="pubnum">10</span>
     <a href="https://doi.org/10.1109/TASE.2024.3423391">
@@ -620,7 +623,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p9" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p9" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">9</span>
     <a href="https://doi.org/10.1002/adem.202301408">
@@ -736,7 +739,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p4" data-tags="tactile" bgcolor="#ffffd0">
+<tr class="pub lead" id="p4" data-tags="tactile">
   <td class="pubcell">
     <span class="pubnum">4</span>
     <a href="https://doi.org/10.3390/s22145370">
@@ -760,7 +763,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p3" data-tags="robotics" bgcolor="#ffffd0">
+<tr class="pub lead" id="p3" data-tags="robotics">
   <td class="pubcell">
     <span class="pubnum">3</span>
     <a href="https://doi.org/10.3390/act11050124">
@@ -801,7 +804,7 @@
   </td>
 </tr>
 
-<tr class="pub" id="p1" data-tags="tactile" bgcolor="#ffffd0">
+<tr class="pub lead" id="p1" data-tags="tactile">
   <td class="pubcell">
     <span class="pubnum">1</span>
     <a href="https://doi.org/10.1109/JSEN.2021.3086114">
