@@ -305,6 +305,22 @@ tr.pub:target td {
   .robohand .hand, .robohand .ghost, .robohand .finger { animation: none !important; }
 }
 
+/* ---------- scroll reveal: sections float up and fade in the first time they enter the viewport ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .35s ease-out, transform .35s ease-out;
+}
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /* ---------- journey map ---------- */
 .journey {
   position: relative;

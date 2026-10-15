@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>document.documentElement.className += " js";</script>   <!-- scroll-reveal start state applies only when scripts run -->
 
     <title>Wenchao Yue</title>
 
@@ -15,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012i">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261012j">
     <style>
       /* Publication rows: text only (thumbnails may come back later; see README).
          Rules live here, next to the markup, so a cached stylesheet.css cannot skew the layout. */
@@ -159,7 +160,7 @@
           </tbody></table>
 
           <!-- ======================= Research ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research Philosophy</h2>
@@ -177,7 +178,7 @@
           </tbody></table>
 
           <!-- ======================= Publications ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2 id="publications">Selected Publications</h2>
@@ -216,7 +217,7 @@
             </tr>
           </tbody></table>
 
-          <div class="publist-wrap">
+          <div class="publist-wrap reveal">
           <div id="publist">
           <table style="width:100%;border:0px;border-spacing:0px 4px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
@@ -828,7 +829,7 @@
           </div>
 
           <!-- ======================= Selected Recognition ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Selected Recognition</h2>
@@ -875,7 +876,7 @@
           </tbody></table>
 
           <!-- ======================= Service ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Service</h2>
@@ -891,7 +892,7 @@
           </tbody></table>
 
           <!-- ======================= Teaching ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Teaching</h2>
@@ -909,7 +910,7 @@
           </tbody></table>
 
           <!-- ======================= Footer ======================= -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="reveal" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
                 <br>
@@ -1093,6 +1094,25 @@
           }, { threshold: 0.35 });
           io.observe(svg);
         }
+      })();
+
+      // ---------------------------------------------------------------- scroll reveal
+      (function () {
+        var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        if (!els.length) { return; }
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (entries) {
+          var k = 0;
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) { return; }
+            var e = en.target;
+            e.style.transitionDelay = (k++ * 70) + 'ms';            // blocks that appear together cascade slightly
+            e.classList.add('in');
+            e.addEventListener('transitionend', function () { e.style.transitionDelay = ''; }, { once: true });
+            io.unobserve(e);                                         // plays once
+          });
+        }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+        els.forEach(function (e) { io.observe(e); });
       })();
 
       // ---------------------------------------------------------------- the waving hand
