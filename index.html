@@ -1111,7 +1111,7 @@
             e.addEventListener('transitionend', function () { e.style.transitionDelay = ''; }, { once: true });
             io.unobserve(e);                                         // plays once
           });
-        }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+        }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });   // small fixed margin so the short footer at the page end still qualifies
         els.forEach(function (e) { io.observe(e); });
       })();
 
