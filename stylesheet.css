@@ -404,7 +404,7 @@ tr.pub:target td {
 }
 
 .journey .sea {
-  fill: #f3f6fa;
+  fill: url(#sea-grad);
 }
 
 .journey .land {
@@ -412,8 +412,13 @@ tr.pub:target td {
   stroke: none;
 }
 
+/* land: a pale cream base with muted sand dots, like a soft atlas against the pale blue water */
+#land-dots rect {
+  fill: #f4f0e7;
+}
+
 #land-dots circle {
-  fill: #b9c5d2;
+  fill: #cfc3ab;
 }
 
 .journey .grid {
@@ -494,7 +499,7 @@ tr.pub:target td {
   letter-spacing: 0.08em;
   fill: #8a97a6;
   paint-order: stroke;
-  stroke: #f3f6fa;
+  stroke: rgba(255, 255, 255, 0.9);
   stroke-width: 3.5px;
   stroke-linejoin: round;
   pointer-events: none;
