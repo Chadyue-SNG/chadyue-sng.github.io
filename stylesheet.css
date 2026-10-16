@@ -129,7 +129,8 @@ h2 {
   margin: 4px 0 0 0;
   text-align: center;
   font-size: 13px;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: #7b8794;
 }
 
@@ -533,8 +534,8 @@ tr.pub:target td {
 }
 
 span.highlight {
-  background: #f2f6fb;
-  box-shadow: inset 2px 0 0 #1772d0;
+  background: #f0f8f7;
+  box-shadow: inset 2px 0 0 #2a9d8f;
   padding: 0 4px 0 7px;
   border-radius: 2px;
 }
